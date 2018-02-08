@@ -1,0 +1,88 @@
+.logo{
+    margin-left:200px;
+    margin-top:100px;
+
+    
+}
+
+.container{
+    width: 50%;
+    height: 100%;
+    background-color:#D8D8D8;
+    margin-left:300px;
+    max-width: 1000px;
+    margin:auto;
+}
+
+.usuario{
+    margin-left: 300px;
+}
+
+
+
+
+.tabla{
+    margin-left:500px;
+}
+
+.ui-inputgroup{
+    margin-left:100px;
+}
+
+.label{
+    margin-left:250px;
+    font-family: serif;
+}
+
+label{
+    font-family: serif;
+}
+
+.label2{
+    margin-left:250px;
+    font-family: serif;
+}
+.ui-inputgroup2{
+    margin-left:70px;
+}
+
+.botones{
+    margin-left:200px;
+    margin-top:50px;
+   
+    
+}
+
+.link{
+    margin-left:405px;
+}
+
+.prueba{
+    /*  border: 2px solid;*/
+    width: 405px;
+    padding: 0px;
+    margin-left: 105px;
+}
+
+.ingresar{
+    background-color:#FF8000;
+    color:white;
+    margin-left:0px;
+}
+
+.registro{
+    background-color:#FF8000;
+    color:white;
+    margin-left: 25px;
+}
+
+.login{
+    font-family: 'serif';
+    font-size: 130%;
+}
+
+@media(max-width:480px){
+    .container  {
+          width: 100%;
+      }
+  }

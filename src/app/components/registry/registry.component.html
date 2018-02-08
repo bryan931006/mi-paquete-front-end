@@ -1,0 +1,145 @@
+<div class="titulo">
+
+  <label class="subtitulo">Crear Cuenta</label>
+<br>
+<br>
+<br>
+
+<div>
+  <label class="subtitulo2">Informacion del remitente:</label>
+</div>
+  <br>
+  <br>
+<div >
+  <button mat-button class="empresa" (click)="CambiarPantalla()">Empresa</button>
+  <button mat-button class="persona" (click)="CambiarPantalla()">Persona Natural</button>
+</div>
+<br>
+<br>
+ <div class="bloque" *ngIf="!agregar"> 
+      <div class="contenedor">
+
+          <mat-form-field class="prueba">
+
+            
+            <input matInput placeholder="Empresa *">
+          </mat-form-field>
+
+       
+
+          <mat-form-field  class="prueba2">
+             
+              <input matInput placeholder="NIT *" >
+          </mat-form-field>
+   
+          <mat-form-field  class="prueba">
+             
+              <input matInput placeholder="telefono " >
+          </mat-form-field>
+
+          <mat-form-field  class="prueba2">
+              
+              <input matInput placeholder="Celular *" >
+          </mat-form-field>
+
+          <mat-form-field  class="prueba">
+              
+              <input matInput placeholder="Direccion de recogida *" >
+              
+          </mat-form-field>
+          <mat-form-field class="prueba2" >
+             
+              <input matInput placeholder="Correo electronico *" >
+          </mat-form-field>
+
+          <mat-form-field class="prueba" >
+           
+              <input matInput placeholder="Usuario *">
+          </mat-form-field>
+
+          <mat-form-field class="prueba2" >
+              
+              <input matInput placeholder="Contraseña *">
+          </mat-form-field>
+
+          <mat-form-field class="prueba" >
+            
+              <input matInput placeholder=" tipo de mercancia que envia frecuentemente *" >
+          </mat-form-field>
+
+          <button mat-button class="cuenta">Crear Cuenta</button>
+
+        </div>
+      </div>
+
+        <div class="bloque" *ngIf="agregar">
+
+            <div class="contenedor">
+
+                <mat-form-field class="prueba">
+      
+                  
+                  <input matInput placeholder="Nombre *">
+                </mat-form-field>
+      
+             
+      
+                <mat-form-field class="prueba2" >
+                    
+                    <input matInput placeholder="Apellido *" >
+                </mat-form-field>
+         
+                <mat-form-field class="prueba" >
+                    
+                    <input matInput placeholder="Cedula *" >
+                </mat-form-field>
+      
+                <mat-form-field class="prueba2" >
+                   
+                    <input matInput placeholder="Pasaporte *" >
+                </mat-form-field>
+      
+                <mat-form-field class="prueba" >
+                    
+                    <input matInput placeholder="Telefono " >
+                    
+                </mat-form-field>
+                <mat-form-field class="prueba2" >
+                    
+                    <input matInput placeholder="Celular *" >
+                </mat-form-field>
+      
+                <mat-form-field class="prueba" >
+                    
+                    <input matInput placeholder="Direccion de recogida *" >
+                </mat-form-field>
+      
+                <mat-form-field class="prueba2" >
+                    
+                    <input matInput placeholder="Correo Electronico *" >
+                </mat-form-field>
+      
+                <mat-form-field class="prueba" >
+                    
+                    <input matInput placeholder="Usuario *" >
+                </mat-form-field>
+      
+                <mat-form-field class="prueba2" >
+                    
+                    <input matInput placeholder="Contraseña *" >
+                </mat-form-field>
+
+                <mat-form-field class="prueba" >
+                   
+                    <input matInput placeholder=" tipo de mercancia que envia frecuentemente *" >
+                </mat-form-field>
+
+                <button mat-button class="cuenta">Crear Cuenta</button>
+      
+              </div>
+            </div>
+ 
+ 
+
+
+</div>

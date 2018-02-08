@@ -1,0 +1,114 @@
+.body{
+    
+    width: 100%;
+     height: 650px;
+     
+ }
+  
+ .container{
+     width: 90%;
+     background: url('../assets/fondo.jpg');
+     margin:auto;
+     border-radius: 25px;
+     margin-top:-80px;
+     margin-left:200px;
+
+     
+     
+ }
+ .box .li .parrafo{
+ margin-right: 200px;
+ }
+ 
+ .box{
+ margin-left:200px;
+ display: block;
+ 
+ 
+ 
+ }
+
+ .box  li a {
+font-weight: 600px;
+ }
+
+
+ .box a{
+     color:white;
+     background-color:#FF5F00;
+     text-decoration:none;
+     padding: 20px;
+     
+ }
+ 
+ .box .li{
+     display:inline-block;
+     position:relative;
+    
+ }
+ .subtitulo{
+     margin-left:220px;
+ }
+ 
+ .cubo{
+    width: 50%;
+    margin-left:80px;
+    
+}
+
+.block{
+    box-sizing: border-box;
+}
+
+ .texto{
+     margin-left:70px;
+ }
+ .menu{
+
+     float:left;
+     line-height: 30px;
+     display: block;
+ 
+ }
+ .menu li{
+ display: inline-block;
+ position:relative;
+ z-index: 100;
+ }
+ 
+ .menu a{
+     color:black;
+     text-decoration:none;
+     padding: 20px;
+     display: block;
+     -webkit-transition: all 0.2s ease-in-out 0s;
+   -moz-transition: all 0.2s ease-in-out 0s;
+   -o-transition: all 0.2s ease-in-out 0s;
+   -ms-transition: all 0.2s ease-in-out 0s;
+   transition: all 0.2s ease-in-out 0s;
+     
+ }
+ 
+ .menu a:hover{
+     background: #FF5F00;
+     color:white;
+ }
+ 
+ .boton{
+     background-color:#FF5F00;
+     
+    
+ }
+ 
+ .boton3{
+     margin-right: 200px;
+ }
+ 
+ .boton4{
+     margin-right: 100px;
+ }
+
+ .logo2{
+ margin-left:50px;
+
+ }

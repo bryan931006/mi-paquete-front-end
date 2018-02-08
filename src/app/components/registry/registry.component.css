@@ -1,0 +1,90 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+  .titulo{
+    margin-left:250px;
+    margin-top:100px;
+  }
+
+  .subtitulo{
+    font-family: 'Roboto', sans-serif;
+ font-size: 140%;
+ 
+
+  }
+
+  .subtitulo2{
+    font-family: 'Roboto', sans-serif;
+ font-size: 140%;
+  }
+
+  .contenedor{
+    width: 600px;
+    height: 600px;
+
+
+  }
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    background-color:black;
+  }
+  
+  .example-full-width {
+    width:230px;
+    margin-left:-20px;
+    padding: 20px;
+    min-width: 150px;
+    max-width: 400px;
+   
+  }
+
+  .prueba{
+      /*  border: 2px solid;*/
+      width: 255px;
+      padding: 0px;
+      margin-left: 5px;
+  }
+
+  .prueba2{
+    /*  border: 2px solid;*/
+    width: 255px;
+    padding: 0px;
+    margin-left: 50px;
+}
+
+  .formulario{
+    width:200px;
+  float:left;
+
+  }
+
+  mat-grid-tile {
+    background: lightblue;
+    width: 50px;
+    height: 50px;
+  }
+
+  .persona{
+    background-color:#FF8000;
+    color:white;
+  }
+
+  .empresa{
+    background-color:#FF8000;
+    color:white;
+  }
+
+  .cuenta{
+    margin-left:450px;
+    background-color:#FF8000;
+    color:white;
+  }
