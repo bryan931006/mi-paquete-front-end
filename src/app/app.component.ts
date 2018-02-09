@@ -14,11 +14,11 @@ import { FormControl, Validators } from '@angular/forms';
   providers: [LoginService]
 })
 export class AppComponent {
-  title = 'app';
+  public title = 'app';
   public identity;
   public token;
   public url: string;
- // public variable;
+ 
   constructor(
     private _loginService: LoginService,
     private _router: Router
@@ -33,27 +33,16 @@ export class AppComponent {
 
     this.identity = this._loginService.getIdentity();
     if (this.identity == null) {
-
       document.getElementById('but-log-out').style.visibility = "hidden";
     }
   }
 
 
   logout() {
-    //this._loginService.logout();
-
-    localStorage.removeItem('identity');
-    localStorage.removeItem('token');
-    localStorage.clear();
-    this.identity = null;
-    this.token = null;
-    //ocultar el boton de cerrar sesion 
-    document.getElementById('but-log-out').style.visibility = "hidden";
-    //para que el cerrar la sesion se vaya a la ruta por defecto 
-    this._router.navigate(['/login']);
+     this._loginService.logout();
+ 
   }
-
-
+ 
 
 
 }

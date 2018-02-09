@@ -45,8 +45,6 @@ export class LoginComponent implements OnInit {
 
 
   public onSubmit() {
-    console.log(this.user);
-
     //coneguir los datos del usuario 
     this._loginService.signup(this.user).subscribe(
       response => {
@@ -71,9 +69,6 @@ export class LoginComponent implements OnInit {
 
                 this.user = new User();
                 this.user.role = 'ROLE_USER';
-                console.log("identity:  ");
-                console.log(this.identity);
-                console.log('token :  ' + this.token);
                 this._router.navigate(['/home']);
                 //que aprezca el boton cerrar secion
                 document.getElementById('but-log-out').style.visibility = "visible";

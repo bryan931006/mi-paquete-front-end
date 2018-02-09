@@ -55,6 +55,7 @@ export class LoginService {
     this.identity = null;
     this.token = null;
     //para que el cerrar la sesion se vaya a la ruta por defecto 
-    this._router.navigate(['/']);
+    document.getElementById('but-log-out').style.visibility = "hidden";
+    this._router.navigate(['/login']);
   }
 }
