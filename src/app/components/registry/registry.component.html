@@ -1,145 +1,145 @@
 <div class="titulo">
 
-  <label class="subtitulo">Crear Cuenta</label>
-<br>
-<br>
-<br>
+    <label class="subtitulo">Crear Cuenta</label>
+    <br>
+    <br>
+    <br>
 
-<div>
-  <label class="subtitulo2">Informacion del remitente:</label>
-</div>
-  <br>
-  <br>
-<div >
-  <button mat-button class="empresa" (click)="CambiarPantalla()">Empresa</button>
-  <button mat-button class="persona" (click)="CambiarPantalla()">Persona Natural</button>
-</div>
-<br>
-<br>
- <div class="bloque" *ngIf="!agregar"> 
-      <div class="contenedor">
-
-          <mat-form-field class="prueba">
-
-            
-            <input matInput placeholder="Empresa *">
-          </mat-form-field>
-
-       
-
-          <mat-form-field  class="prueba2">
-             
-              <input matInput placeholder="NIT *" >
-          </mat-form-field>
-   
-          <mat-form-field  class="prueba">
-             
-              <input matInput placeholder="telefono " >
-          </mat-form-field>
-
-          <mat-form-field  class="prueba2">
-              
-              <input matInput placeholder="Celular *" >
-          </mat-form-field>
-
-          <mat-form-field  class="prueba">
-              
-              <input matInput placeholder="Direccion de recogida *" >
-              
-          </mat-form-field>
-          <mat-form-field class="prueba2" >
-             
-              <input matInput placeholder="Correo electronico *" >
-          </mat-form-field>
-
-          <mat-form-field class="prueba" >
-           
-              <input matInput placeholder="Usuario *">
-          </mat-form-field>
-
-          <mat-form-field class="prueba2" >
-              
-              <input matInput placeholder="Contraseña *">
-          </mat-form-field>
-
-          <mat-form-field class="prueba" >
-            
-              <input matInput placeholder=" tipo de mercancia que envia frecuentemente *" >
-          </mat-form-field>
-
-          <button mat-button class="cuenta">Crear Cuenta</button>
-
-        </div>
-      </div>
-
-        <div class="bloque" *ngIf="agregar">
-
-            <div class="contenedor">
+    <div>
+        <label class="subtitulo2">Informacion del remitente:</label>
+    </div>
+    <br>
+    <br>
+    <div>
+        <button mat-button class="empresa" (click)="CambiarPantalla('ROLE_DELIVERY_COMPANY')">Empresa</button>
+        <button mat-button class="persona" (click)="CambiarPantalla('ROLE_USER')">Persona Natural</button>
+    </div>
+    <br>
+    <br>
+    <div class="bloque" *ngIf="!agregar">
+        <div class="contenedor">
+            <div *ngIf="alertRegister">
+                <div class="alert alert-info" role="alert">
+                    {{alertRegister}}
+                </div>
+            </div>
+            <form #companyRegisterForm="ngForm" (ngSubmit)="onSubmitRegister()" class="col-md-10">
 
                 <mat-form-field class="prueba">
-      
-                  
-                  <input matInput placeholder="Nombre *">
-                </mat-form-field>
-      
-             
-      
-                <mat-form-field class="prueba2" >
-                    
-                    <input matInput placeholder="Apellido *" >
-                </mat-form-field>
-         
-                <mat-form-field class="prueba" >
-                    
-                    <input matInput placeholder="Cedula *" >
-                </mat-form-field>
-      
-                <mat-form-field class="prueba2" >
-                   
-                    <input matInput placeholder="Pasaporte *" >
-                </mat-form-field>
-      
-                <mat-form-field class="prueba" >
-                    
-                    <input matInput placeholder="Telefono " >
-                    
-                </mat-form-field>
-                <mat-form-field class="prueba2" >
-                    
-                    <input matInput placeholder="Celular *" >
-                </mat-form-field>
-      
-                <mat-form-field class="prueba" >
-                    
-                    <input matInput placeholder="Direccion de recogida *" >
-                </mat-form-field>
-      
-                <mat-form-field class="prueba2" >
-                    
-                    <input matInput placeholder="Correo Electronico *" >
-                </mat-form-field>
-      
-                <mat-form-field class="prueba" >
-                    
-                    <input matInput placeholder="Usuario *" >
-                </mat-form-field>
-      
-                <mat-form-field class="prueba2" >
-                    
-                    <input matInput placeholder="Contraseña *" >
+                    <input matInput placeholder="Empresa *" #companyName="ngModel" name="companyName" [(ngModel)]="user_register.company_name" > 
                 </mat-form-field>
 
-                <mat-form-field class="prueba" >
-                   
-                    <input matInput placeholder=" tipo de mercancia que envia frecuentemente *" >
+                <mat-form-field class="prueba2">
+                    <input matInput placeholder="Nombre *" #companyPersonName="ngModel" name="companyPersonName" [(ngModel)]="user_register.name">
                 </mat-form-field>
 
-                <button mat-button class="cuenta">Crear Cuenta</button>
-      
-              </div>
+                <mat-form-field class="prueba">
+                    <input matInput placeholder="Apellido *" #companySurname="ngModel" name="companySurname" [(ngModel)]="user_register.surname">
+                </mat-form-field>
+            
+                <mat-form-field class="prueba2">
+                    <input matInput placeholder="Tipo de Identificacion *" #companyNitType="ngModel" name="companyNitType" [(ngModel)]="user_register.nit_type">
+                </mat-form-field>
+
+                <mat-form-field class="prueba">
+
+                    <input matInput placeholder="Cedula *" #companyNit="ngModel" name="companyNit" [(ngModel)]="user_register.nit">
+                </mat-form-field>
+
+                  <mat-form-field class="prueba2">
+
+                    <input matInput placeholder="Telefono " #companyPhone="ngModel" name="companyPhone" [(ngModel)]="user_register.phone">
+
+                </mat-form-field>
+                <mat-form-field class="prueba">
+
+                    <input matInput placeholder="Celular *" #companyCellPhone="ngModel" name="companyCellPhone" [(ngModel)]="user_register.cell_phone">
+                </mat-form-field>
+
+                <mat-form-field class="prueba2">
+
+                    <input matInput placeholder="Direccion de recogida *" #companyAddress="ngModel" name="companyAddress" [(ngModel)]="user_register.address">
+                </mat-form-field>
+
+                <mat-form-field class="prueba">
+
+                    <input matInput placeholder="Correo Electronico *"  #companyEmail="ngModel" name="companyEmail" [(ngModel)]="user_register.email">
+                </mat-form-field>
+
+                <mat-form-field class="prueba2">
+
+                    <input matInput placeholder="Contraseña *" #companyPassword="ngModel" name="companyPassword" [(ngModel)]="user_register.password">
+                </mat-form-field>
+
+                <mat-form-field class="prueba">
+
+                    <input matInput placeholder=" tipo de mercancia que envia frecuentemente *" #companyCommonDeliver="ngModel" name="companyCommonDeliver" [(ngModel)]="user_register.common_deliver" >
+                </mat-form-field>
+
+                <input type="submit" value="Crear Cuenta" class="btn btn-primary" />
+
+            </form>
+        </div>
+    </div>
+
+    <div class="bloque" *ngIf="agregar">
+
+        <div class="contenedor">
+            <div *ngIf="alertRegister">
+                <div class="alert alert-info" role="alert">
+                    {{alertRegister}}
+                </div>
             </div>
- 
- 
+            <form #registerForm="ngForm" (ngSubmit)="onSubmitRegister()" class="col-md-10">
+                <mat-form-field class="prueba">
+                    <input matInput placeholder="Nombre *" #name="ngModel" name="name" [(ngModel)]="user_register.name">
+                </mat-form-field>
 
+                <mat-form-field class="prueba2">
+                    <input matInput placeholder="Apellido *" #surname="ngModel" name="surname" [(ngModel)]="user_register.surname">
+                </mat-form-field>
+            
+                <mat-form-field class="prueba">
+                    <input matInput placeholder="Tipo de Identificacion *" #nitType="ngModel" name="nitType" [(ngModel)]="user_register.nit_type">
+                </mat-form-field>
 
+                <mat-form-field class="prueba2">
+
+                    <input matInput placeholder="Cedula *" #nit="ngModel" name="nit" [(ngModel)]="user_register.nit">
+                </mat-form-field>
+
+                  <mat-form-field class="prueba">
+
+                    <input matInput placeholder="Telefono " #phone="ngModel" name="phone" [(ngModel)]="user_register.phone">
+
+                </mat-form-field>
+                <mat-form-field class="prueba2">
+
+                    <input matInput placeholder="Celular *" #cellPhone="ngModel" name="cellPhone" [(ngModel)]="user_register.cell_phone">
+                </mat-form-field>
+
+                <mat-form-field class="prueba">
+
+                    <input matInput placeholder="Direccion de recogida *" #address="ngModel" name="address" [(ngModel)]="user_register.address">
+                </mat-form-field>
+
+                <mat-form-field class="prueba2">
+
+                    <input matInput placeholder="Correo Electronico *"  #email="ngModel" name="email" [(ngModel)]="user_register.email">
+                </mat-form-field>
+
+                <mat-form-field class="prueba">
+
+                    <input matInput placeholder="Contraseña *" #password="ngModel" name="password" [(ngModel)]="user_register.password">
+                </mat-form-field>
+
+                <mat-form-field class="prueba2">
+
+                    <input matInput placeholder=" tipo de mercancia que envia frecuentemente *" #commonDeliver="ngModel" name="commonDeliver" [(ngModel)]="user_register.common_deliver" >
+                </mat-form-field>
+
+                <button type="submit" class="cuenta">Crear Cuenta</button>
+            </form>
+        </div>
+    </div>
 </div>
