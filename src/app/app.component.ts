@@ -18,7 +18,7 @@ export class AppComponent {
   public identity;
   public token;
   public url: string;
-  public variable;
+ // public variable;
   constructor(
     private _loginService: LoginService,
     private _router: Router
@@ -53,9 +53,7 @@ export class AppComponent {
     this._router.navigate(['/login']);
   }
 
-  ver() {
-    alert(this.variable);
-  }
+
 
 
 }
