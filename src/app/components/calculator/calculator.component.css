@@ -1,0 +1,47 @@
+.container{
+
+    width: 70%;
+    height: 100%;
+    background-color:#D8D8D8;
+    margin-left:300px;
+    max-width: 1000px;
+    margin:auto;
+    margin-top:150px;
+
+}
+
+.boton{
+
+    margin-left:350px;
+    background-color:#FF8000;
+    color:white;
+
+}
+
+.carga{
+    margin-left:300px;
+}
+
+.valor{
+    margin-left:100px;
+}
+
+.peso{
+    margin-left:50px;
+}
+
+.logito{
+    margin-left: 20px;
+}
+
+.cantidad{
+    margin-left:80px;
+}
+
+.destino{
+    margin-left:50px;
+}
+
+.paquete{
+    margin-left:30px;
+}
