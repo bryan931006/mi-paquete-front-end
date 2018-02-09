@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {HomeComponent} from '../app/components/home/home.component';
+
 import { NgModule } from '@angular/core';
 import{RegistryComponent} from '../app/components/registry/registry.component';
 import { routing } from '../app/routing/AppRouting';
@@ -41,6 +42,7 @@ import {
 } from '@angular/material';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
+import { CalculatorComponent } from './components/calculator/calculator.component';
 
 
 
@@ -52,6 +54,7 @@ import { LoginComponent } from './components/login/login.component';
     HomeComponent,
     LoginComponent,
     RegistryComponent,
+    CalculatorComponent,
    
   ],
   imports: [
