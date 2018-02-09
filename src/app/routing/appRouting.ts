@@ -14,6 +14,7 @@ const routes: Routes = [
     { path: 'home',  component: HomeComponent },
     { path: 'login',  component: LoginComponent },
     { path: 'registro',  component: RegistryComponent },
+<<<<<<< HEAD
     { path: 'calculadora',  component: CalculatorComponent },
     
     
@@ -21,11 +22,15 @@ const routes: Routes = [
     
     
 
+=======
+    
+ 
+>>>>>>> 500a46275e8045025f14ea1f44b370f97f4ede4f
 ];
     
 
 
-
-    export const routing : ModuleWithProviders = RouterModule.forRoot(routes);
+export const appRoutingProviders: any[] = [];
+export const routing : ModuleWithProviders = RouterModule.forRoot(routes);
     
     

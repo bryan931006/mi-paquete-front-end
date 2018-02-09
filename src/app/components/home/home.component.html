@@ -1,6 +1,20 @@
+ 
 <br>
 <br>
 <br>
+<div  *ngIf="identity" id="home-user-logged">
+  <p>
+    Bienvenido {{ identity.name }}
+
+  </p>
+</div>
+
+<div  *ngIf="!identity" id="home-user-unlogged">
+  <p>
+    Bienvenido Usuario NO LOGUEADO
+
+  </p>
+</div>
 <div id="slider">
     <div class="container">
       <div class="row">
@@ -83,5 +97,3 @@
 
       
     </section>
-
-   
