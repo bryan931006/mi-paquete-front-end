@@ -1,3 +1,13 @@
-<p>
-  home works!
-</p>
+<div  *ngIf="identity" id="home-user-logged">
+  <p>
+    Bienvenido {{ identity.name }}
+
+  </p>
+</div>
+
+<div  *ngIf="!identity" id="home-user-unlogged">
+  <p>
+    Bienvenido Usuario NO LOGUEADO
+
+  </p>
+</div>

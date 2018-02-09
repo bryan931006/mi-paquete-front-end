@@ -1,13 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {HomeComponent} from '../app/components/home/home.component';
+
 import { NgModule } from '@angular/core';
 import{RegistryComponent} from '../app/components/registry/registry.component';
-import { routing } from '../app/routing/AppRouting';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { routing, appRoutingProviders } from '../app/routing/AppRouting';
+
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+import {HttpModule} from '@angular/http'
+import {HomeComponent} from '../app/components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { AppComponent } from './app.component';
+
 import {
   MatAutocompleteModule,
-  
   MatButtonModule,
   MatButtonToggleModule,
   MatCardModule,
@@ -39,12 +43,9 @@ import {
   MatTooltipModule,
   MatStepperModule,
 } from '@angular/material';
-import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
 
-
-
-
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,6 @@ import { LoginComponent } from './components/login/login.component';
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
-    routing,
     NoopAnimationsModule,
     MatAutocompleteModule,
     MatButtonModule,
@@ -90,8 +90,11 @@ import { LoginComponent } from './components/login/login.component';
     MatToolbarModule,
     MatTooltipModule,
     MatStepperModule,
+    FormsModule,
+    HttpModule,
+    routing
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

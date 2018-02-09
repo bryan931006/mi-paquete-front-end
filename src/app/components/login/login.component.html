@@ -1,25 +1,33 @@
 <div class="container">
-
   <div class="logo">
-
     <img src="./assets/paquete2.PNG" width="200">
   </div>
   <br>
-  <div>
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field class="prueba">
+        <input type="email" matInput placeholder="Correo Electronico" name="email" [(ngModel)]="user.email" #email="ngModel"  required>
+        <mat-error *ngIf="email.invalid">El campo es requerido</mat-error>
+      </mat-form-field>
+    </div>
     <mat-form-field class="prueba">
-      <input matInput placeholder="Usuario *">
+      <input type="password" matInput placeholder="Contraseña" name="password" #password="ngModel" [(ngModel)]="user.password"
+        required>
     </mat-form-field>
-  </div>
-  <mat-form-field class="prueba">
-    <input matInput placeholder="Contraseña *">
-  </mat-form-field>
-  <div class="link">
-    <a routerLink="/enviocorreo" routerLinkActive="active">olvidé mi contraseña</a>
-  </div>
-  <td class="colMsgError"></td>
-  <div class="botones">
-    <button class="ingresar" mat-button>Ingresar</button>
-    <button class="registro" routerLink="/registro" routerLinkActive="active" mat-button>Registrarse</button>
+    <div class="link">
+      <a routerLink="/enviocorreo" routerLinkActive="active">olvidé mi contraseña</a>
+    </div>
+    <td class="colMsgError"></td>
+    <div class="botones">
+      <button class="ingresar" type="submit" mat-button   [disabled]="!loginForm.form.valid" >Ingresar</button>
+      <button class="registro" routerLink="/registro" routerLinkActive="active" mat-button>Registrarse</button>
+    </div>
+    <div *ngIf="errorMessage">
+      <div class="alert alert-info" role="alert">
+         {{errorMessage}}
+      </div>
+    </div>
+  </form>
 
-  </div>
+
 </div>

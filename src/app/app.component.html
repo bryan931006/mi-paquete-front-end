@@ -1,46 +1,39 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="cubo">
   <div class="block">
-<a routerLink="/home" routerLinkActive="active"><img class="logito" src="./assets/paquete.png" width="110px" ></a>
-</div>
+    <a routerLink="/home" routerLinkActive="active"><img class="logito" src="./assets/paquete.png" width="110px" ></a>
+  </div>
 </div>
 <div class="container">
-
-<ul class="menu">
-   
-    
-
- 
+  <ul class="menu">
     <li>
-    <a href="transportadoras.html">Transportadoras</a>
-  </li>
-  <li>
-    <a href="Local">Quienes somos</a>
-  </li>
-  <li>
-    <a href="nacional.html">Contectenos</a>
-  </li>
-  <li>
-    <a routerLink="/calculadora" routerLinkActive="active">Calculadora de envio</a>
-  </li>
-  <li>
-    <a routerLink="/registro" routerLinkActive="active">Registrarse</a>
-  </li>
-  <li>
-    <a routerLink="/login" routerLinkActive="active">Iniciar Sesion</a>
-  </li>
-
-</ul>
-
-
+      <a href="transportadoras.html">Transportadoras</a>
+    </li>
+    <li>
+      <a href="Local">Quienes somos</a>
+    </li>
+    <li>
+      <a  (click)="ver()">Contectenos</a>
+    </li>
+    <li>
+      <a routerLink="/calculadora" routerLinkActive="active">Calculadora de envio</a>
+    </li>
+    <li>
+      <a routerLink="/registro" routerLinkActive="active">Registrarse</a>
+    </li>
+    <li>
+      <a routerLink="/login" routerLinkActive="active">Iniciar Sesion</a>
+    </li>
+    <li   id="but-log-out"    > 
+      <a  (click)="logout()">Cerrar Sesión</a>
+    </li>
+    
+  </ul>
 </div>
 <div class="logo2">
-
 </div>
 <br>
 <br>
 <br>
 <br>
-
 <router-outlet></router-outlet>
-

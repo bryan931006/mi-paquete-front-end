@@ -14,17 +14,12 @@ const routes: Routes = [
     { path: 'login',  component: LoginComponent },
     { path: 'registro',  component: RegistryComponent },
     
-    
-    
-    
-    
-    
-
+ 
 ];
     
 
 
-
-    export const routing : ModuleWithProviders = RouterModule.forRoot(routes);
+export const appRoutingProviders: any[] = [];
+export const routing : ModuleWithProviders = RouterModule.forRoot(routes);
     
     
