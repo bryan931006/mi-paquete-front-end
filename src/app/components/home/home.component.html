@@ -6,64 +6,63 @@
   <p>
     Bienvenido {{ identity.name }}
 
-  </p>
-</div>
-
-<div  *ngIf="!identity" id="home-user-unlogged">
-  <p>
-    Bienvenido Usuario NO LOGUEADO
-
-  </p>
-</div>
-<div id="slider">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 col-md-offset-2">
-          <div class="block">
-<div class ="imagen">
-              <img src="../assets/caja.png" width="100%" height="430px">
-            <h1 class="Titulo">MI PAQUETE  </h1>
+        
+    <!-- Slider Start -->
+    <section id="slider">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-2">
+            <div class="block">
+              <h1 class="animated fadeInUp">MI PAQUETE </h1>
+              
+            </div>
           </div>
-          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Wrapper Start -->
+    <section id="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 col-sm-12">
+            <div class="block">
+              <div class="section-title">
+                <h2>CALCULADORA DE ENVIO</h2>
+                <p>Prueba nuestra Calculadora de envio indicando las dimensiones y peso del paquete. Con esta información, te enseñaremos una lista de servicios de transportadoras , fecha de recogida y fecha de entrega.</p>
+              </div>
+              <h2>ENVIOS</h2>
+              <p>Compara los precios y servicios, elige el más adecuado para ti y contrátalo, Ahorra 
+                  en tus envios.Te proponemos las mejores tarifas para particulares y  empresas </p>
+            </div>
+          </div> 
+         
         </div>
       </div>
     </div>
-  </div>
-
-  <section id="intro">
+  </section>
+        
+    <!-- Service Start -->
+    <section id="service">
       <div class="container">
         <div class="row">
-          <div class="cubo">
-            <div class="block">
-              <div class="sesion">
-                  <button  routerLink="/calculadora" routerLinkActive="active" mat-button width="300px"><h2>CALCULADORA DE ENVIO</h2></button>
-
-      
-                 
-                <hr>
-               
-                <p>Compara los precios y servicios, elige el más adecuado para ti y contrátalo, Ahorra 
-                  en tus envios.Te proponemos las mejores tarifas para particulares y  empresas.
-                </p>
-              </div>
-             
-            </div>
-          </div> 
-         
+          <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+          </div>
         </div>
-        <div class="cubo2">
-            <div class="block2">
-              <div class="sesion2">
-               
-        
-                <img src="../assets/calculadora.jpg" height="200px" >
-              
-              </div>
-             
+        <div class="row ">
+          <div class="col-sm-6 col-md-3">
+            <div class="service-item">
+              <i class="icon ion-coffee"></i>
+              <h4>Branding</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut </p>
             </div>
           </div> 
          
       </div>
+    </section>
+    <!-- Call to action Start -->
+    <section id="call-to-action">
       <div class="container">
           <div class="row">
             <div class="cubo3">
@@ -81,19 +80,99 @@
             </div> 
            
           </div>
-          <div class="cubo4">
-              <div class="block4">
-                <div class="sesion4">
-                 
-          
-                  <img src="../assets/envios.png" height="200px" >
-                
+        </div>
+      </div>
+    </section>
+    <!-- Content Start -->
+    <section id="testimonial">
+      <div class="container">
+        <div class="row">
+          <div class="section-title text-center">
+            <h2>Fun Facts About Us</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="block">
+              <ul class="counter-box clearfix">
+                <li>
+                  <div class="block">
+                    <i class="ion-ios-chatboxes-outline"></i>
+                    <h4 class="counter">20000</h4>
+                    <span>Cups Of Coffee</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="block">
+                    <i class="ion-ios-glasses-outline"></i>
+                    <h4 class="counter">20000</h4>
+                    <span>Cups Of Coffee</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="block">
+                    <i class="ion-ios-compose-outline"></i>
+                    <h4 class="counter">20000</h4>
+                    <span>Cups Of Coffee</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="block">
+                    <i class="ion-ios-timer-outline"></i>
+                    <h4 class="counter">20000</h4>
+                    <span>Cups Of Coffee</span>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+         <!-- <div class="col-md-6">
+            <div class="testimonial-carousel">
+              <div id="testimonial-slider" class="owl-carousel">
+                <div>
+                    <img src="img/cotation.png" alt="IMG">
+                    <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
+                    <div class="user">
+                      <img src="img/item-img1.jpg" alt="Pepole">
+                      <p><span>Rose Ray</span> CEO</p>
+                    </div>
                 </div>
-               
+                <div>
+                  <img src="img/cotation.png" alt="IMG">
+                    <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
+                    <div class="user">
+                      <img src="img/item-img1.jpg" alt="Pepole">
+                      <p><span>Rose Ray</span> CEO</p>
+                    </div>
+                </div>
+                <div>
+                  <img src="img/cotation.png" alt="IMG">
+                    <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
+                    <div class="user">
+                      <img src="img/item-img1.jpg" alt="Pepole">
+                      <p><span>Rose Ray</span> CEO</p>
+                    </div>
+                </div>
+                <div>
+                  <img src="img/cotation.png" alt="IMG">
+                    <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
+                    <div class="user">
+                      <img src="img/item-img1.jpg" alt="Pepole">
+                      <p><span>Rose Ray</span> CEO</p>
+                    </div>
+                </div>
               </div>
             </div> 
            
         </div>
+      </div>
+    </section>
+
+
+
+
 
       
     </section-->
