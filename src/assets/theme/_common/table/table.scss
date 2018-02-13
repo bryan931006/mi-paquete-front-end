@@ -1,0 +1,14 @@
+@import "../../_variables.scss";
+@import "../../_main.scss";
+.table {
+	label {
+		margin-bottom: 0;
+	}
+	
+	.checkbox + span {
+		margin-bottom: 0;
+		&:before {
+			line-height: 20px;
+		}
+	}
+}

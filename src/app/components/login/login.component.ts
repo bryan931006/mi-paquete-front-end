@@ -6,12 +6,13 @@ import { User } from "../../models/user";
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { GLOBAL } from './../../services/global';
 import { FormControl, Validators } from '@angular/forms';
+
 //import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 //import {MatGridListModule} from '@angular/material';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  styleUrls: ['./login.component.scss'],
   providers: [LoginService]
 })
 export class LoginComponent implements OnInit {

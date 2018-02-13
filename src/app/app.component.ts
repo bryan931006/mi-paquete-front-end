@@ -10,10 +10,11 @@ import { FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
   providers: [LoginService]
 })
 export class AppComponent {
+  toggleMenu: boolean = false;
   public title = 'app';
   public identity;
   public token;
@@ -42,6 +43,8 @@ export class AppComponent {
      this._loginService.logout();
  
   }
+
+   
  
 
 

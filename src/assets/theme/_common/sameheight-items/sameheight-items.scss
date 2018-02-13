@@ -1,0 +1,7 @@
+@import "../../_variables.scss";
+@import "../../_main.scss";
+.sameheight {
+	display: flex;
+  	flex-direction: row;
+  	align-items: stretch;
+}
