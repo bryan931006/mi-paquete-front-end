@@ -54,9 +54,7 @@
         "../node_modules/popper.js/dist/umd/popper.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js",
         "../src/assets/theme/_common/animations/animations.js",
-        "../src/assets/theme/_common/items-list/items-list.js",
-        "../src/assets/theme/_common/nprogress/nprogress.js",
-        "../src/assets/theme/_common/sameheight-items/sameheight-items.js"
+        "../src/assets/theme/_common/items-list/items-list.js"
         
        
       ],

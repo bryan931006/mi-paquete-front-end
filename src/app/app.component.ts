@@ -38,9 +38,9 @@ export class AppComponent {
   ngOnInit() {
 
     this.identity = this._loginService.getIdentity();
-    if (this.identity == null) {
-      document.getElementById('but-log-out').style.visibility = "hidden";
-    }
+   // if (this.identity == null) {
+     // document.getElementById('but-log-out').style.visibility = "hidden";
+   // }
 
 
   }
