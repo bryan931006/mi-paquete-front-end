@@ -15,11 +15,19 @@ const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'registro', component: RegistryComponent },
-    { path: 'calculadora', component: CalculatorComponent },
-    {
+    
+    /*{
         path: 'home', component: MenuComponent,
         children: [
             { path: '', component: HomeComponent }
+
+        ]
+    },*/
+
+    {
+        path: 'home', component: MenuComponent,
+        children: [
+            { path: '', component: CalculatorComponent }
 
         ]
     }

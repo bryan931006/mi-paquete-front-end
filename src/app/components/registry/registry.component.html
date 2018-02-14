@@ -1,250 +1,252 @@
-<div class="auth-container">
-    <div class="card">
-        <header class="auth-header">
-            <h1 class="auth-title">
-                <div class="logo">
+<div class="auth">
+    <div class="auth-container">
+        <div class="card">
+
+            <header class="auth-header">
+                    <div class="row">
+                            <div  class="justify-content-center" style=" margin: auto; padding: 10px;" >
+                              <img src="./assets/paquete2.PNG" width="70%">
+                            </div>
+                            
                 
-                    <span class="l l2"></span>
-                    <span class="l l3"></span>
-                    <span class="l l4"></span>
-                    <span class="l l5"></span>
+                          </div>
+            </header>
+
+            <div class="auth-content">
+                <p class="text-left">
+                    Crear cuenta</p>
+                <p class="text-left">
+                    Informacion del remitente</p>
+
+                <div class="btn-group btn-group-justified " role="group" aria-label="...">
+                    <div class="btn-group" role="group">
+                        <button btn btn-default class="empresa" (click)="CambiarPantalla('ROLE_DELIVERY_COMPANY')">Empresa</button>
+                        <button btn btn-default class="persona" (click)="CambiarPantalla('ROLE_USER')">Persona Natural</button>
+                    </div>
+
+
                 </div>
-                Mi Paquete
-            </h1>
-        </header>
-        <div class="auth-content">
-            <p class="text-left">
-                Crear cuenta</p>
-            <p class="text-left">
-                Informacion del remitente</p>
+                <div class="bloque" *ngIf="!agregar">
+                    <div *ngIf="alertRegister">
+                        <div class="alert alert-info" role="alert">
+                            {{alertRegister}}
+                        </div>
+                    </div>
 
-            <div class="btn-group btn-group-justified " role="group" aria-label="...">
-                <div class="btn-group" role="group">
-                    <button btn btn-default class="empresa" (click)="CambiarPantalla('ROLE_DELIVERY_COMPANY')">Empresa</button>
-                    <button btn btn-default class="persona" (click)="CambiarPantalla('ROLE_USER')">Persona Natural</button>
+
+                    <form #companyRegisterForm="ngForm" (ngSubmit)="onSubmitRegister()">
+                        <div class="form-row">
+                            <div class="form-group  col-md-6 ">
+                                <input class="form-control underlined" type="text" input-group-addon placeholder="Empresa *" id="inputError1" #companyName="ngModel"
+                                    name="companyName" [(ngModel)]="user_register.company_name">
+                                <span class="has-error" *ngIf="companyName.invalid">El campo es requerido</span>
+                            </div>
+
+
+
+                            <div class="form-group has-error col-md-6 ">
+                                <input class="form-control underlined " type="text" input-group-addon placeholder="Nombre *" id="inputError1" #companyPersonName="ngModel"
+                                    name="companyPersonName" [(ngModel)]="user_register.name">
+                                <span class="has-error" *ngIf="companyPersonName.invalid">El campo es requerido</span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group has-error col-md-6 ">
+                                <input class="form-control underlined" type="text" input-group-addon placeholder="Apellido *" id="inputError1" #companySurname="ngModel"
+                                    name="companySurname" [(ngModel)]="user_register.surname">
+                            </div>
+
+                            <span class="has-error" *ngIf="companySurname.invalid">El campo es requerido</span>
+
+
+                            <div class="form-group has-error col-md-6">
+                                <input class="form-control underlined" type="text" input-group-addon placeholder="Tipo de identificacion" id="inputError1"
+                                    #companyNitType="ngModel" name="companyNitType" [(ngModel)]="user_register.nit_type">
+                            </div>
+
+                            <span class="has-error" *ngIf="companyNitType.invalid">El campo es requerido</span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group has-error col-md-6">
+
+                                <input class="form-control underlined" type="text" input-group-addon placeholder="cedula" id="inputError1" #companyNit="ngModel"
+                                    name="companyNit" [(ngModel)]="user_register.nit">
+                            </div>
+
+                            <span class="has-error" *ngIf="companyNit.invalid">El campo es requerido</span>
+
+                            <div class="form-group has-error col-md-6">
+                                <input class="form-control underlined" type="text" input-group-addon placeholder="Telefono" id="inputError1" #companyPhone="ngModel"
+                                    name="companyPhone" [(ngModel)]="user_register.phone">
+
+                            </div>
+                            <span class="has-error" *ngIf="telefono.invalid">El campo es requerido</span>
+
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group has-error col-md-6">
+                                <input class="form-control underlined" type="celular" placeholder="Celular *" id="inputError1" #companyCellPhone="ngModel"
+                                    name="companyCellPhone" [(ngModel)]="user_register.cell_phone">
+                            </div>
+                            <div class="has-error" *ngIf="companyCellPhone.invalid">El campo es requerido</div>
+
+                            <div class="form-group has-error col-md-6">
+
+                                <input class="form-control underlined" type="text" placeholder="Direccion de recogida habitual *" id="inputError1" #companyAddress="ngModel"
+                                    name="companyAddress" [(ngModel)]="user_register.address">
+                                <div class="has-error" *ngIf="companyAddress.invalid">El campo es requerido</div>
+
+                            </div>
+
+
+
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group has-error col-md-6">
+
+                                <input class="form-control underlined" type="text" placeholder="Correo Electronico *" id="inputError1" #companyEmail="ngModel"
+                                    name="companyEmail" [(ngModel)]="user_register.email">
+                                <span class="has-error" *ngIf="companyEmail.invalid">El campo es requerido</span>
+
+                            </div>
+
+
+                            <div class="form-group has-error col-md-6">
+                                <input class="form-control underlined" type="password" placeholder="Contraseña *" #companyPassword="ngModel" name="companyPassword"
+                                    [(ngModel)]="user_register.password">
+                                <span class="has-error" *ngIf="companyPassword.invalid">El campo es requerido</span>
+                            </div>
+
+
+
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group has-error col-md-6">
+
+                                <select class="form-control underlined" type="text" placeholder=" tipo de mercancia que envia frecuentemente *" #companyCommonDeliver="ngModel"
+                                    name="companyCommonDeliver" [(ngModel)]="user_register.common_deliver">
+
+                                    <option selected>Tipo de mercancia que envia frecuentemente</option>
+                                    <option>Seco</option>
+                                    <option>Liquido</option>
+                                    <option>Perecedera</option>
+                                    <option>Fragil</option>
+                                    <option>Refrigerada</option>
+                                    <option>Peligrosa</option>
+                                </select>
+                                <div class="has-error" *ngIf="companyCommonDeliver.invalid">El campo es requerido</div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <button type="submit" class="btn btn-primary">Crear cuenta</button>
+                        </div>
+
+
+                    </form>
+
+
+
                 </div>
 
+                <div class="bloque" *ngIf="agregar">
 
+                    <div class="contenedor">
+                        <div *ngIf="alertRegister">
+                            <div class="alert alert-info" role="alert">
+                                {{alertRegister}}
+                            </div>
+                        </div>
+                        <form #registerForm="ngForm" (ngSubmit)="onSubmitRegister()">
+                            <div class="form-row">
+                                <div class="form-group has-error  col-md-6">
+                                    <input class="form-control underlined" type="text" placeholder="Nombre *" #name="ngModel" name="name" [(ngModel)]="user_register.name">
+                                </div>
+                                <div class="has-error" *ngIf="name.invalid">El campo es requerido</div>
+
+                                <div class="form-group has-error col-md-6">
+                                    <input class="form-control underlined" type="text" placeholder="Apellido *" #surname="ngModel" name="surname" [(ngModel)]="user_register.surname">
+                                </div>
+                                <div class="has-error" *ngIf="surname.invalid">El campo es requerido</div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group has-error col-md-6">
+                                    <input class="form-control underlined" type="text" placeholder="Tipo de Identificacion *" #nitType="ngModel" name="nitType"
+                                        [(ngModel)]="user_register.nit_type">
+                                </div>
+                                <div class="has-error" *ngIf="nitType.invalid">El campo es requerido</div>
+
+                                <div class="form-group has-error col-md-6">
+
+                                    <input class="form-control underlined" type="text" placeholder="Cedula *" #nit="ngModel" name="nit" [(ngModel)]="user_register.nit">
+                                </div>
+                                <div class="has-error" *ngIf="nit.invalid">El campo es requerido</div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group has-error col-md-6">
+
+                                    <input class="form-control underlined" type="text" placeholder="Telefono " #phone="ngModel" name="phone" [(ngModel)]="user_register.phone">
+
+                                </div>
+                                <div class="has-error" *ngIf="surname.invalid">El campo es requerido</div>
+
+                                <div class="form-group has-error col-md-6">
+
+                                    <input class="form-control underlined" type="celular" placeholder="Celular *" #cellPhone="ngModel" name="cellPhone" [(ngModel)]="user_register.cell_phone">
+                                </div>
+                                <div class="has-error" *ngIf="cellPhone.invalid">El campo es requerido</div>
+
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group has-errror col-md-6">
+
+                                    <input class="form-control underlined" type="text" placeholder="Direccion de recogida habitual *" #address="ngModel" name="address"
+                                        [(ngModel)]="user_register.address">
+                                </div>
+                                <div class="has-error" *ngIf="address.invalid">El campo es requerido</div>
+                                <div class="form-group has-error col-md-6">
+
+                                    <input class="form-control underlined" type="text" placeholder="Correo Electronico *" #email="ngModel" name="email" [(ngModel)]="user_register.email">
+                                </div>
+                                <div class="has-error" *ngIf="email.invalid">El campo es requerido</div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group has-error col-md-6">
+
+                                    <input class="form-control underlined" type="password" placeholder="Contraseña *" #password="ngModel" name="password" [(ngModel)]="user_register.password">
+                                </div>
+                                <div class="has-error" *ngIf="password.invalid">El campo es requerido</div>
+                                <div class="form-group has-error col-md-6">
+
+                                    <input class="form-control underlined" placeholder=" tipo de mercancia que envia frecuentemente *" #commonDeliver="ngModel"
+                                        name="commonDeliver" [(ngModel)]="user_register.common_deliver">
+                                </div>
+                                <div class="has-error" *ngIf="commonDeliver.invalid">El campo es requerido</div>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <button class="cuenta" type="submit" class="btn btn-primary">Crear cuenta</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="bloque" *ngIf="!agregar">
-                <div *ngIf="alertRegister">
-                    <div class="alert alert-info" role="alert">
-                        {{alertRegister}}
-                    </div>
-                </div>
-            
-
-            <form #companyRegisterForm="ngForm" (ngSubmit)="onSubmitRegister()">
-                <div class="form-row">
-                    <div class="form-group has-error col-md-6 ">
-                        <input class="form-control underlined" type="text" input-group-addon placeholder="Empresa *" id="inputError1" #companyName="ngModel"
-                            name="companyName" [(ngModel)]="user_register.company_name">
-                        <span class="has-error" *ngIf="companyName.invalid">El campo es requerido</span>
-                    </div>
-
-
-
-                    <div class="form-group has-error col-md-6 ">
-                        <input class="form-control underlined " type="text" input-group-addon placeholder="Nombre *" id="inputError1" #companyPersonName="ngModel"
-                            name="companyPersonName" [(ngModel)]="user_register.name">
-                        <span class="has-error" *ngIf="companyPersonName.invalid">El campo es requerido</span>
-                    </div>
-
-
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group has-error col-md-6 ">
-                        <input class="form-control underlined" type="text" input-group-addon placeholder="Apellido *" id="inputError1" #companySurname="ngModel"
-                            name="companySurname" [(ngModel)]="user_register.surname">
-                    </div>
-
-                    <span class="has-error" *ngIf="companySurname.invalid">El campo es requerido</span>
-
-
-                    <div class="form-group has-error col-md-6">
-                        <input class="form-control underlined" type="text" input-group-addon placeholder="Tipo de identificacion" id="inputError1"
-                            #companyNitType="ngModel" name="companyNitType" [(ngModel)]="user_register.nit_type">
-                    </div>
-
-                    <span class="has-error" *ngIf="companyNitType.invalid">El campo es requerido</span>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group has-error col-md-6">
-
-                        <input class="form-control underlined" type="text" input-group-addon placeholder="cedula" id="inputError1" #companyNit="ngModel"
-                            name="companyNit" [(ngModel)]="user_register.nit">
-                    </div>
-
-                    <span class="has-error" *ngIf="companyNit.invalid">El campo es requerido</span>
-
-                    <div class="form-group has-error col-md-6">
-                        <input class="form-control underlined" type="text" input-group-addon placeholder="Telefono" id="inputError1" #companyPhone="ngModel"
-                            name="companyPhone" [(ngModel)]="user_register.phone">
-
-                    </div>
-                    <span class="has-error" *ngIf="telefono.invalid">El campo es requerido</span>
-
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group has-error col-md-6">
-                        <input class="form-control underlined" type="celular" placeholder="Celular *" id="inputError1" #companyCellPhone="ngModel"
-                            name="companyCellPhone" [(ngModel)]="user_register.cell_phone">
-                    </div>
-                    <div class="has-error" *ngIf="companyCellPhone.invalid">El campo es requerido</div>
-
-                    <div class="form-group has-error col-md-6">
-
-                        <input class="form-control underlined" type="text" placeholder="Direccion de recogida habitual *" id="inputError1" #companyAddress="ngModel"
-                            name="companyAddress" [(ngModel)]="user_register.address">
-                        <div class="has-error" *ngIf="companyAddress.invalid">El campo es requerido</div>
-
-                    </div>
-
-
-
-                </div>
-                <div class="form-row">
-                    <div class="form-group has-error col-md-6">
-
-                        <input class="form-control underlined" type="text" placeholder="Correo Electronico *" id="inputError1" #companyEmail="ngModel"
-                            name="companyEmail" [(ngModel)]="user_register.email">
-                        <span class="has-error" *ngIf="companyEmail.invalid">El campo es requerido</span>
-
-                    </div>
-
-
-                    <div class="form-group has-error col-md-6">
-                        <input class="form-control underlined" type="password" placeholder="Contraseña *" #companyPassword="ngModel" name="companyPassword"
-                            [(ngModel)]="user_register.password">
-                        <span class="has-error" *ngIf="companyPassword.invalid">El campo es requerido</span>
-                    </div>
-
-
-
-                </div>
-                <div class="form-row">
-                    <div class="form-group has-error col-md-6">
-
-                        <select class="form-control underlined" type="text" placeholder=" tipo de mercancia que envia frecuentemente *" #companyCommonDeliver="ngModel"
-                            name="companyCommonDeliver" [(ngModel)]="user_register.common_deliver">
-
-                            <option selected>Tipo de mercancia que envia frecuentemente</option>
-                            <option>Seco</option>
-                            <option>Liquido</option>
-                            <option>Perecedera</option>
-                            <option>Fragil</option>
-                            <option>Refrigerada</option>
-                            <option>Peligrosa</option>
-                        </select>
-                        <div class="has-error" *ngIf="companyCommonDeliver.invalid">El campo es requerido</div>
-
-                    </div>
-                </div>
-
-                <div class="form-group">
-
-                    <button type="submit" class="btn btn-primary">Crear cuenta</button>
-                </div>
-
-
-            </form>
-
-            
 
         </div>
-  
-    <div class="bloque" *ngIf="agregar">
-
-        <div class="contenedor">
-            <div *ngIf="alertRegister">
-                <div class="alert alert-info" role="alert">
-                    {{alertRegister}}
-                </div>
-            </div>
-            <form #registerForm="ngForm" (ngSubmit)="onSubmitRegister()" >
-                <div class="form-row">
-                    <div class="form-group has-error  col-md-6">
-                        <input class="form-control underlined" type="text" placeholder="Nombre *" #name="ngModel" name="name" [(ngModel)]="user_register.name">
-                    </div>
-                    <div class="has-error" *ngIf="name.invalid">El campo es requerido</div>
-
-                    <div class="form-group has-error col-md-6">
-                        <input class="form-control underlined" type="text" placeholder="Apellido *" #surname="ngModel" name="surname" [(ngModel)]="user_register.surname">
-                    </div>
-                    <div class="has-error" *ngIf="surname.invalid">El campo es requerido</div>
-
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group has-error col-md-6">
-                        <input class="form-control underlined" type="text" placeholder="Tipo de Identificacion *" #nitType="ngModel" name="nitType" [(ngModel)]="user_register.nit_type">
-                    </div>
-                    <div class="has-error" *ngIf="nitType.invalid">El campo es requerido</div>
-
-                    <div class="form-group has-error col-md-6">
-
-                        <input class="form-control underlined" type="text" placeholder="Cedula *" #nit="ngModel" name="nit" [(ngModel)]="user_register.nit">
-                    </div>
-                    <div class="has-error" *ngIf="nit.invalid">El campo es requerido</div>
-
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group has-error col-md-6">
-
-                        <input class="form-control underlined" type="text" placeholder="Telefono " #phone="ngModel" name="phone" [(ngModel)]="user_register.phone">
-
-                    </div>
-                    <div class="has-error" *ngIf="surname.invalid">El campo es requerido</div>
-
-                    <div class="form-group has-error col-md-6">
-
-                        <input class="form-control underlined" type="celular" placeholder="Celular *" #cellPhone="ngModel" name="cellPhone" [(ngModel)]="user_register.cell_phone">
-                    </div>
-                    <div class="has-error" *ngIf="cellPhone.invalid">El campo es requerido</div>
-
-                </div>
-                <div class="form-row">
-                    <div class="form-group has-errror col-md-6">
-
-                        <input class="form-control underlined" type="text" placeholder="Direccion de recogida habitual *" #address="ngModel" name="address"
-                            [(ngModel)]="user_register.address">
-                    </div>
-                    <div class="has-error" *ngIf="address.invalid">El campo es requerido</div>
-                    <div class="form-group has-error col-md-6">
-
-                        <input class="form-control underlined" type="text" placeholder="Correo Electronico *" #email="ngModel" name="email" [(ngModel)]="user_register.email">
-                    </div>
-                    <div class="has-error" *ngIf="email.invalid">El campo es requerido</div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group has-error col-md-6">
-
-                        <input class="form-control underlined" type="password" placeholder="Contraseña *" #password="ngModel" name="password" [(ngModel)]="user_register.password">
-                    </div>
-                    <div class="has-error" *ngIf="password.invalid">El campo es requerido</div>
-                    <div class="form-group has-error col-md-6">
-
-                        <input class="form-control underlined" placeholder=" tipo de mercancia que envia frecuentemente *" #commonDeliver="ngModel" name="commonDeliver"
-                            [(ngModel)]="user_register.common_deliver">
-                    </div>
-                    <div class="has-error" *ngIf="commonDeliver.invalid">El campo es requerido</div>
-                </div>
-
-                <div class="form-group col-md-6">
-                    <button class="cuenta" type="submit" class="btn btn-primary">Crear cuenta</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
 
     </div>
-    
 </div>
 
 
