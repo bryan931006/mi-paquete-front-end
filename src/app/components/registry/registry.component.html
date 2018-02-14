@@ -3,13 +3,13 @@
         <div class="card">
 
             <header class="auth-header">
-                    <div class="row">
-                            <div  class="justify-content-center" style=" margin: auto; padding: 10px;" >
-                              <img src="./assets/paquete.png" width="30%">
-                            </div>
-                            
-                
-                          </div>
+                <div class="row">
+                    <div class="justify-content-center" style=" margin: auto; padding: 10px;">
+                        <img src="./assets/paquete.png" width="30%">
+                    </div>
+
+
+                </div>
             </header>
 
             <div class="auth-content">
@@ -20,18 +20,18 @@
 
                 <div class="btn-group btn-group-justified " role="group" aria-label="...">
                     <div class="btn-group" role="group">
-                            <div>
-                                    <label>
-                                       <input class="radio squared" (click)="CambiarPantalla('ROLE_DELIVERY_COMPANY')"  name="squared-radios" checked="checked" type="radio">
-                                       <span>Empresa</span>
-                                   </label>
-                                   <label>
-                                       <input class="radio squared" (click)="CambiarPantalla('ROLE_USER')"  name="squared-radios" type="radio">
-                                       <span>Persona Natural</span>
-                                   </label>
-                                </div>
+                        <div>
+                            <label>
+                                <input class="radio squared" (click)="CambiarPantalla('ROLE_DELIVERY_COMPANY')" name="squared-radios" checked="checked" type="radio">
+                                <span>Empresa</span>
+                            </label>
+                            <label>
+                                <input class="radio squared" (click)="CambiarPantalla('ROLE_USER')" name="squared-radios" type="radio">
+                                <span>Persona Natural</span>
+                            </label>
+                        </div>
 
-                      
+
                     </div>
 
 
@@ -46,74 +46,94 @@
 
                     <form #companyRegisterForm="ngForm" (ngSubmit)="onSubmitRegister()">
                         <div class="form-row">
-                            <div class="form-group has-error  col-md-6 " [class.has-error]="companyName.invalid && companyName.touched">
-                                <input class="form-control underlined" type="text" input-group-addon placeholder="Empresa *"  #companyName="ngModel"
-                                    name="companyName" [(ngModel)]="user_register.company_name" required>
-                                    <span *ngIf="companyName.hasError('required')  && companyName.touched" class="has-error">
-                                            Campo Requerido
-                                        </span>
-                            </div>
-
-
-
-                            <div class="form-group has-error col-md-6 " [class.has-error]="companyPersonName.invalid && companyPersonName.touched">
-                                <input class="form-control underlined " type="text" input-group-addon placeholder="Nombre *"   #companyPersonName="ngModel"
-                                    name="companyPersonName" [(ngModel)]="user_register.name" required>
-                                    <span *ngIf="companyPersonName.hasError('required')  && companyName.touched" class="has-error">
-                                            Campo Requerido
-                                        </span>
-                            </div>
-
-
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group has-error col-md-6 " [class.has-error]="companySurname.invalid && companySurname.touched">
-                                <input class="form-control underlined" type="text" input-group-addon placeholder="Apellido *"   #companySurname="ngModel"
-                                    name="companySurname" [(ngModel)]="user_register.surname">
-                            </div>
-
-                            <span *ngIf="companySurname.hasError('required')  && companySurname.touched" class="has-error">
+                            <div class="form-group  col-md-6 " [class.has-error]="companyName.invalid && companyName.touched">
+                                <input class="form-control underlined" type="text" input-group-addon placeholder="Empresa *" #companyName="ngModel" name="companyName"
+                                    [(ngModel)]="user_register.company_name" required>
+                                <span *ngIf="companyName.hasError('required')  && companyName.touched" class="has-error">
                                     Campo Requerido
                                 </span>
-                            <div class="form-group has-error col-md-6">
-                                <input class="form-control underlined" type="text" input-group-addon placeholder="Tipo de identificacion"  
-                                    #companyNitType="ngModel" name="companyNitType" [(ngModel)]="user_register.nit_type">
                             </div>
 
-                            <span class="has-error" *ngIf="companyNitType.invalid">El campo es requerido</span>
-                        </div>
 
-                        <div class="form-row">
-                            <div class="form-group has-error col-md-6">
 
-                                <input class="form-control underlined" type="text" input-group-addon placeholder="cedula"   #companyNit="ngModel"
-                                    name="companyNit" [(ngModel)]="user_register.nit">
+                            <div class="form-group  col-md-6 " [class.has-error]="companyPersonName.invalid && companyPersonName.touched">
+                                <input class="form-control underlined " type="text" input-group-addon placeholder="Nombre *" #companyPersonName="ngModel"
+                                    name="companyPersonName" [(ngModel)]="user_register.name" required>
+                                <span *ngIf="companyPersonName.hasError('required')  && companyPersonName.touched" class="has-error">
+                                    Campo Requerido
+                                </span>
                             </div>
 
-                            <span class="has-error" *ngIf="companyNit.invalid">El campo es requerido</span>
-
-                            <div class="form-group has-error col-md-6">
-                                <input class="form-control underlined" type="text"   placeholder="Telefono"   #companyPhone="ngModel"
-                                    name="companyPhone" [(ngModel)]="user_register.phone">
-
-                            </div>
-                            <span class="has-error" *ngIf="companyPhone.invalid">El campo es requerido</span>
 
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group has-error col-md-6">
-                                <input class="form-control underlined" type="celular" placeholder="Celular *"  #companyCellPhone="ngModel"
-                                    name="companyCellPhone" [(ngModel)]="user_register.cell_phone">
+                            <div class="form-group  col-md-6 " [class.has-error]="companySurname.invalid && companySurname.touched">
+                                <input class="form-control underlined" type="text" input-group-addon placeholder="Apellido *" #companySurname="ngModel" name="companySurname"
+                                    [(ngModel)]="user_register.surname" required>
+                                <span *ngIf="companySurname.hasError('required')  && companySurname.touched" class="has-error">
+                                    Campo Requerido
+                                </span>
                             </div>
-                            <div class="has-error" *ngIf="companyCellPhone.invalid">El campo es requerido</div>
 
-                            <div class="form-group has-error col-md-6">
 
-                                <input class="form-control underlined" type="text" placeholder="Direccion de recogida habitual *"   #companyAddress="ngModel"
-                                    name="companyAddress" [(ngModel)]="user_register.address">
-                                <div class="has-error" *ngIf="companyAddress.invalid">El campo es requerido</div>
+                            <div class="form-group  col-md-6" [class.has-error]="companyNitType.invalid && companyNitType.touched">
+                                <input class="form-control underlined" type="text" input-group-addon placeholder="Tipo de identificacion" #companyNitType="ngModel"
+                                    name="companyNitType" [(ngModel)]="user_register.nit_type" required>
+
+                                <span *ngIf="companyNitType.hasError('required')  && companyNitType.touched" class="has-error">
+                                    Campo Requerido
+                                </span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group  col-md-6" [class.has-error]="companyNit.invalid && companyNit.touched">
+
+                                <input class="form-control underlined" type="text" input-group-addon placeholder="cedula" #companyNit="ngModel" name="companyNit"
+                                    [(ngModel)]="user_register.nit" required>
+
+                                <span *ngIf="companyNit.hasError('required')  && companyNit.touched" class="has-error">
+                                    Campo Requerido
+                                </span>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-6" [class.has-error]="companyPhone.invalid && companyPhone.touched">
+                                <input class="form-control underlined" type="text" placeholder="Telefono" #companyPhone="ngModel" name="companyPhone" [(ngModel)]="user_register.phone"
+                                    required>
+
+
+                                <span *ngIf="companyPhone.hasError('required')  && companyPhone.touched" class="has-error">
+                                    Campo Requerido
+                                </span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group  col-md-6" [class.has-error]="companyCellPhone.invalid && companyCellPhone.touched">
+                                <input class="form-control underlined" type="celular" placeholder="Celular *" #companyCellPhone="ngModel" name="companyCellPhone"
+                                    [(ngModel)]="user_register.cell_phone" required>
+
+                                <span *ngIf="companyCellPhone.hasError('required')  && companyCellPhone.touched" class="has-error">
+                                    Campo Requerido
+                                </span>
+                            </div>
+
+
+                            <div class="form-group has-error col-md-6" [class.has-error]="companyAddress.invalid && companyAddress.touched">
+
+                                <input class="form-control underlined" type="text" placeholder="Direccion de recogida habitual *" #companyAddress="ngModel"
+                                    name="companyAddress" [(ngModel)]="user_register.address" required>
+                                <span *ngIf="companyAddress.hasError('required')  && companyAddress.touched" class="has-error">
+                                    Campo Requerido
+                                </span>
+
 
                             </div>
 
@@ -121,29 +141,34 @@
 
                         </div>
                         <div class="form-row">
-                            <div class="form-group has-error col-md-6">
+                            <div class="form-group  col-md-6" [class.has-error]="companyEmail.invalid && companyEmail.touched">
 
                                 <input class="form-control underlined" type="text" placeholder="Correo Electronico *" id="inputError1" #companyEmail="ngModel"
-                                    name="companyEmail" [(ngModel)]="user_register.email">
-                                <span class="has-error" *ngIf="companyEmail.invalid">El campo es requerido</span>
+                                    name="companyEmail" [(ngModel)]="user_register.email" required>
+                                <span *ngIf="companyEmail.hasError('required')  && companyEmail.touched" class="has-error">
+                                    Campo Requerido
+                                </span>
 
                             </div>
 
 
-                            <div class="form-group has-error col-md-6">
+                            <div class="form-group  col-md-6" [class.has-error]="companyPassword.invalid && companyPassword.touched">
                                 <input class="form-control underlined" type="password" placeholder="Contraseña *" #companyPassword="ngModel" name="companyPassword"
-                                    [(ngModel)]="user_register.password">
-                                <span class="has-error" *ngIf="companyPassword.invalid">El campo es requerido</span>
+                                    [(ngModel)]="user_register.password" required>
+                                <span *ngIf="companyPassword.hasError('required')  && companyPassword.touched" class="has-error">
+                                    Campo Requerido
+                                </span>
+
                             </div>
 
 
 
                         </div>
                         <div class="form-row">
-                            <div class="form-group has-error col-md-6">
+                            <div class="form-group  col-md-6" [class.has-error]="companyCommonDeliver.invalid && companyCommonDeliver.touched">
 
                                 <select class="form-control underlined" type="text" placeholder=" tipo de mercancia que envia frecuentemente *" #companyCommonDeliver="ngModel"
-                                    name="companyCommonDeliver" [(ngModel)]="user_register.common_deliver">
+                                    name="companyCommonDeliver" [(ngModel)]="user_register.common_deliver" required>
 
                                     <option selected>Tipo de mercancia que envia frecuentemente</option>
                                     <option>Seco</option>
@@ -153,8 +178,10 @@
                                     <option>Refrigerada</option>
                                     <option>Peligrosa</option>
                                 </select>
-                                <div class="has-error" *ngIf="companyCommonDeliver.invalid">El campo es requerido</div>
-
+                         
+                                <span *ngIf="companyCommonDeliver.hasError('required')  && companyCommonDeliver.touched" class="has-error">
+                                        Campo Requerido
+                                    </span>
                             </div>
                         </div>
 
@@ -180,74 +207,115 @@
                         </div>
                         <form #registerForm="ngForm" (ngSubmit)="onSubmitRegister()">
                             <div class="form-row">
-                                <div class="form-group has-error  col-md-6">
-                                    <input class="form-control underlined" type="text" placeholder="Nombre *" #name="ngModel" name="name" [(ngModel)]="user_register.name">
+                                <div class="form-group   col-md-6" [class.has-error]="name.invalid && name.touched">
+                                    <input class="form-control underlined" type="text" placeholder="Nombre *" #name="ngModel" name="name" [(ngModel)]="user_register.name" required>
+                                    <span *ngIf="name.hasError('required')  && name.touched" class="has-error">
+                                            Campo Requerido
+                                        </span>
+                               
                                 </div>
-                                <div class="has-error" *ngIf="name.invalid">El campo es requerido</div>
+                               
 
-                                <div class="form-group has-error col-md-6">
-                                    <input class="form-control underlined" type="text" placeholder="Apellido *" #surname="ngModel" name="surname" [(ngModel)]="user_register.surname">
+                                <div class="form-group col-md-6"[class.has-error]="surname.invalid && surname.touched">
+                                    <input class="form-control underlined" type="text" placeholder="Apellido *" #surname="ngModel" name="surname" [(ngModel)]="user_register.surname" required>
+                                    <span *ngIf="surname.hasError('required')  && surname.touched" class="has-error">
+                                            Campo Requerido
+                                        </span>
+                                
                                 </div>
-                                <div class="has-error" *ngIf="surname.invalid">El campo es requerido</div>
+                                
 
                             </div>
 
                             <div class="form-row">
-                                <div class="form-group has-error col-md-6">
+                                <div class="form-group  col-md-6" [class.has-error]="nitType.invalid && nitType.touched">
                                     <input class="form-control underlined" type="text" placeholder="Tipo de Identificacion *" #nitType="ngModel" name="nitType"
-                                        [(ngModel)]="user_register.nit_type">
-                                </div>
-                                <div class="has-error" *ngIf="nitType.invalid">El campo es requerido</div>
+                                        [(ngModel)]="user_register.nit_type" required>
+                                        <span *ngIf="nitType.hasError('required')  && nitType.touched" class="has-error">
+                                                Campo Requerido
+                                            </span>
+                                    
+                                
+                                    </div>
+                                
 
-                                <div class="form-group has-error col-md-6">
+                                <div class="form-group col-md-6"[class.has-error]="nit.invalid && nit.touched">
 
-                                    <input class="form-control underlined" type="text" placeholder="Cedula *" #nit="ngModel" name="nit" [(ngModel)]="user_register.nit">
+                                    <input class="form-control underlined" type="text" placeholder="Cedula *" #nit="ngModel" name="nit" [(ngModel)]="user_register.nit" required>
+                                    <span *ngIf="nit.hasError('required')  && nit.touched" class="has-error">
+                                            Campo Requerido
+                                        </span>
+                                
                                 </div>
-                                <div class="has-error" *ngIf="nit.invalid">El campo es requerido</div>
+        
 
                             </div>
 
                             <div class="form-row">
-                                <div class="form-group has-error col-md-6">
+                                <div class="form-group  col-md-6" [class.has-error]="phone.invalid && phone.touched">
 
-                                    <input class="form-control underlined" type="text" placeholder="Telefono " #phone="ngModel" name="phone" [(ngModel)]="user_register.phone">
+                                    <input class="form-control underlined" type="text" placeholder="Telefono " #phone="ngModel" name="phone" [(ngModel)]="user_register.phone" required>
 
+                                    <span *ngIf="phone.hasError('required')  && phone.touched" class="has-error">
+                                            Campo Requerido
+                                        </span>
                                 </div>
-                                <div class="has-error" *ngIf="surname.invalid">El campo es requerido</div>
+                              
 
-                                <div class="form-group has-error col-md-6">
+                                <div class="form-group  col-md-6" [class.has-error]="cellPhone.invalid && cellPhone.touched">
 
-                                    <input class="form-control underlined" type="celular" placeholder="Celular *" #cellPhone="ngModel" name="cellPhone" [(ngModel)]="user_register.cell_phone">
+                                    <input class="form-control underlined" type="celular" placeholder="Celular *" #cellPhone="ngModel" name="cellPhone" [(ngModel)]="user_register.cell_phone" required>
+                                    <span *ngIf="cellPhone.hasError('required')  && cellPhone.touched" class="has-error">
+                                            Campo Requerido
+                                        </span>
+                               
                                 </div>
-                                <div class="has-error" *ngIf="cellPhone.invalid">El campo es requerido</div>
+                           
 
                             </div>
                             <div class="form-row">
-                                <div class="form-group has-errror col-md-6">
+                                <div class="form-group  col-md-6" [class.has-error]="address.invalid && address.touched">
 
                                     <input class="form-control underlined" type="text" placeholder="Direccion de recogida habitual *" #address="ngModel" name="address"
-                                        [(ngModel)]="user_register.address">
+                                        [(ngModel)]="user_register.address" required>
+
+                                        <span *ngIf="address.hasError('required')  && address.touched" class="has-error">
+                                                Campo Requerido
+                                            </span>
                                 </div>
-                                <div class="has-error" *ngIf="address.invalid">El campo es requerido</div>
-                                <div class="form-group has-error col-md-6">
+                                
+                                <div class="form-group  col-md-6"[class.has-error]="email.invalid && email.touched">
 
                                     <input class="form-control underlined" type="text" placeholder="Correo Electronico *" #email="ngModel" name="email" [(ngModel)]="user_register.email">
+                                    <span *ngIf="email.hasError('required')  && email.touched" class="has-error">
+                                            Campo Requerido
+                                        </span>
+                               
                                 </div>
-                                <div class="has-error" *ngIf="email.invalid">El campo es requerido</div>
+                              
                             </div>
 
                             <div class="form-row">
-                                <div class="form-group has-error col-md-6">
+                                <div class="form-group  col-md-6" [class.has-error]="password.invalid && password.touched">
 
-                                    <input class="form-control underlined" type="password" placeholder="Contraseña *" #password="ngModel" name="password" [(ngModel)]="user_register.password">
+                                    <input class="form-control underlined" type="password" placeholder="Contraseña *" #password="ngModel" name="password" [(ngModel)]="user_register.password" required>
+                                    <span *ngIf="password.hasError('required')  && password.touched" class="has-error">
+                                            Campo Requerido
+                                        </span>
+                                
                                 </div>
-                                <div class="has-error" *ngIf="password.invalid">El campo es requerido</div>
-                                <div class="form-group has-error col-md-6">
+                     
+                                <div class="form-group col-md-6" [class.has-error]="commonDeliver.invalid && commonDeliver.touched">
 
                                     <input class="form-control underlined" placeholder=" tipo de mercancia que envia frecuentemente *" #commonDeliver="ngModel"
-                                        name="commonDeliver" [(ngModel)]="user_register.common_deliver">
+                                        name="commonDeliver" [(ngModel)]="user_register.common_deliver"required>
+
+                                        <span *ngIf="commonDeliver.hasError('required')  && commonDeliver.touched" class="has-error">
+                                                Campo Requerido
+                                            </span>
+                                    
                                 </div>
-                                <div class="has-error" *ngIf="commonDeliver.invalid">El campo es requerido</div>
+                      
                             </div>
 
                             <div class="form-group col-md-6">
