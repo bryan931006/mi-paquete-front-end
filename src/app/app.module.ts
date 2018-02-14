@@ -27,7 +27,7 @@ import { MenuComponent } from './components/menu/menu.component';
     BrowserAnimationsModule,
     BrowserModule,
     NoopAnimationsModule,
-     
+    ReactiveFormsModule,
     FormsModule,
     HttpModule,
     routing
