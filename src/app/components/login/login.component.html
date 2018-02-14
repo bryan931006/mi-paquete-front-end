@@ -1,38 +1,3 @@
-<!--div class="container">
-  <div class="logo">
-    <img src="./assets/paquete2.PNG" width="200">
-  </div>
-  <br>
-  <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
-    <div>
-      <mat-form-field class="prueba">
-        <input type="email" matInput placeholder="Correo Electronico" name="email" [(ngModel)]="user.email" #email="ngModel"  required>
-        <mat-error *ngIf="email.invalid">El campo es requerido</mat-error>
-      </mat-form-field>
-    </div>
-    <mat-form-field class="prueba">
-      <input type="password" matInput placeholder="Contraseña" name="password" #password="ngModel" [(ngModel)]="user.password"
-        required>
-    </mat-form-field>
-    <div class="link">
-      <a routerLink="/enviocorreo" routerLinkActive="active">olvidé mi contraseña</a>
-    </div>
-    <td class="colMsgError"></td>
-    <div class="botones">
-      <button class="ingresar" type="submit" mat-button   [disabled]="!loginForm.form.valid" >Ingresar</button>
-      <button class="registro" routerLink="/registro" routerLinkActive="active" mat-button>Registrarse</button>
-    </div>
-    <div *ngIf="errorMessage">
-      <div class="alert alert-info" role="alert">
-         {{errorMessage}}
-      </div>
-    </div>
-  </form>
-
-
-</div-->
-
-
 <div class="auth">
   <div class="auth-container">
     <div class="card">
@@ -52,7 +17,7 @@
         <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
           <div class="form-group" [class.has-error]="email.invalid && email.touched" >
             <input type="email" class="form-control underlined" placeholder="Correo electronico" name="email" [(ngModel)]="user.email"
-              #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"  required>
+              #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"  autocomplete="off" required>
           
               <span *ngIf="email.hasError('pattern')  && email.touched" class="has-error">
                   Formato de Email incorrecto
@@ -64,7 +29,7 @@
           <div class="form-group" [class.has-error]="password.invalid && password.touched">
 
             <input type="password" class="form-control underlined" name="password" id="password" placeholder="Contraseña" name="password"
-              #password="ngModel" [(ngModel)]="user.password" required>
+              #password="ngModel" [(ngModel)]="user.password" autocomplete="off" required>
 
               <span *ngIf="password.hasError('required')  && password.touched" class="has-error">
                   La contraseña es requerida
