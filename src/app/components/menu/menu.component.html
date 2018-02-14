@@ -106,9 +106,9 @@
                         <i class="fa fa-bell icon"></i> Notifications </a>
               <a class="dropdown-item" href="#">
                         <i class="fa fa-gear icon"></i> Settings </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="login.html">
-                        <i class="fa fa-power-off icon"></i> Logout </a>
+              <div class="dropdown-divider" id="but-log-out" ></div>
+              <a  (click)="logout()" class="dropdown-item" >
+                        <i class="fa fa-power-off icon"></i> Cerrar sesión </a>
             </div>
           </li>
         </ul>
@@ -121,16 +121,14 @@
       <div class="sidebar-container">
 
         <div class="sidebar-header">
+          <div class="row">
           <div class="brand">
             <div class="logo">
-              <span class="l l1"></span>
-              <span class="l l2"></span>
-              <span class="l l3"></span>
-              <span class="l l4"></span>
-              <span class="l l5"></span>
+                <img src="./assets/paquete.png" width="50px">
             </div>
             Modular Admin
           </div>
+        </div>
         </div>
 
 
@@ -141,20 +139,20 @@
           <ul class="sidebar-menu metismenu" id="sidebar-menu">
 
             <li>
-              <a href="index.html">
-              <i class="fa fa-home"></i> Dashboard
+              <a routerLink="/home" routerLinkActive="active">
+              <i class="fa fa-home"></i> Inicio
             </a>
             </li>
 
 
             <li>
 
-              <a data-toggle="dropdown" href="">
-              <i class="fa fa-th-large"></i> Items Manager
-              <i class="fa arrow"></i>
+              <a routerLink="/login" routerLinkActive="active">
+              <i class="fa fa-th-large"></i> Iniciar Sesión
+              
             </a>
 
-              <ul class="sidebar-nav">
+              <!--<ul class="sidebar-nav">
                 <li>
                   <a href="items-list.html">
                   Items List
@@ -166,16 +164,16 @@
                   Item Editor
                 </a>
                 </li>
-              </ul>
+              </ul>-->
             </li>
 
             <li>
-              <a href="">
-              <i class="fa fa-bar-chart"></i> Charts
-              <i class="fa arrow"></i>
+              <a routerLink="/registro" routerLinkActive="active">
+              <i class="fa fa-bar-chart"></i> Registrarse
+              
             </a>
 
-              <ul class="sidebar-nav">
+              <!--<ul class="sidebar-nav">
                 <li>
                   <a href="charts-flot.html">
                   Flot Charts
@@ -187,76 +185,25 @@
                   Morris Charts
                 </a>
                 </li>
-              </ul>
+              </ul>-->
             </li>
 
             <li>
               <a href="">
-              <i class="fa fa-table"></i> Tables
-              <i class="fa arrow"></i>
+              <i class="fa fa-table"></i> Consultar Estado de envio
+              
             </a>
 
-              <ul class="sidebar-nav">
-                <li>
-                  <a href="static-tables.html">
-                  Static Tables
-                </a>
-                </li>
-
-                <li>
-                  <a href="responsive-tables.html">
-                  Responsive Tables
-                </a>
-                </li>
-
-              </ul>
+           
             </li>
 
             <li>
-              <a href="forms.html">
-              <i class="fa fa-pencil-square-o"></i> Forms
+              <a routerLink="/calculadora" routerLinkActive="active">
+              <i class="fa fa-pencil-square-o"></i> Calculadora de envio
             </a>
             </li>
 
-            <li>
-              <a href="">
-              <i class="fa fa-desktop"></i> UI Elements
-              <i class="fa arrow"></i>
-            </a>
-
-              <ul class="sidebar-nav">
-                <li>
-                  <a href="buttons.html">
-                  Buttons
-                </a>
-                </li>
-
-                <li>
-                  <a href="cards.html">
-                  Cards
-                </a>
-                </li>
-
-                <li>
-                  <a href="typography.html">
-                  Typography
-                </a>
-                </li>
-
-                <li>
-                  <a href="icons.html">
-                  Icons
-                </a>
-                </li>
-
-                <li>
-                  <a href="grid.html">
-                  Grid
-                </a>
-                </li>
-              </ul>
-            </li>
-
+           <!--
             <li>
 
               <a href="">
@@ -307,8 +254,8 @@
                 </a>
                 </li>
               </ul>
-            </li>
-
+            </li>-->
+<!--
             <li>
               <a href="">
               <i class="fa fa-sitemap"></i> Menu Levels
@@ -392,15 +339,15 @@
                 </li>
 
               </ul>
-            </li>
-
+            </li>-->
+<!--
             <li>
               <a href="https://github.com/modularcode/modular-admin-html">
               <i class="fa fa-github-alt"></i> Theme Docs
             </a>
             </li>
 
-
+          -->
           </ul>
         </nav>
 
