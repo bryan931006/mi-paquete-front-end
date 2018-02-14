@@ -1,6 +1,32 @@
 
-@import "../assets/theme/_variables.scss";
-@import "../assets/theme/_main.scss";
+@import "../../../assets/theme/_variables.scss";
+@import "../../../assets/theme/_main.scss";
+
+@media (max-width: 991.98px) and (min-width: 768px) { 
+ 
+.app .content {
+    padding: 95px 20px 75px 20px;
+}
+
+
+.app .content {
+    padding: 95px 20px 75px 20px;
+    min-height: 100vh;
+}
+ 
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+ 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+ 
+article, aside, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+}
 
 .toggleMenuStyle {
 	display: block;
