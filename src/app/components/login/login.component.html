@@ -61,10 +61,14 @@
                   El Email es requerido
               </span>
           </div>
-          <div class="form-group">
+          <div class="form-group" [class.has-error]="password.invalid && password.touched">
 
             <input type="password" class="form-control underlined" name="password" id="password" placeholder="Contraseña" name="password"
               #password="ngModel" [(ngModel)]="user.password" required>
+
+              <span *ngIf="password.hasError('required')  && password.touched" class="has-error">
+                  La contraseña es requerida
+              </span> 
           </div>
           <div class="form-group">
             <label for="remember">

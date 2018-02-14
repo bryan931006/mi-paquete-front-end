@@ -20,8 +20,18 @@
 
                 <div class="btn-group btn-group-justified " role="group" aria-label="...">
                     <div class="btn-group" role="group">
-                        <button btn btn-primary class="empresa" (click)="CambiarPantalla('ROLE_DELIVERY_COMPANY')">Empresa</button>
-                        <button btn btn-primary class="persona" (click)="CambiarPantalla('ROLE_USER')">Persona Natural</button>
+                            <div>
+                                    <label>
+                                       <input class="radio squared" (click)="CambiarPantalla('ROLE_DELIVERY_COMPANY')"  name="squared-radios" checked="checked" type="radio">
+                                       <span>Empresa</span>
+                                   </label>
+                                   <label>
+                                       <input class="radio squared" (click)="CambiarPantalla('ROLE_USER')"  name="squared-radios" type="radio">
+                                       <span>Persona Natural</span>
+                                   </label>
+                                </div>
+
+                      
                     </div>
 
 
@@ -36,32 +46,36 @@
 
                     <form #companyRegisterForm="ngForm" (ngSubmit)="onSubmitRegister()">
                         <div class="form-row">
-                            <div class="form-group  col-md-6 ">
+                            <div class="form-group has-error  col-md-6 " [class.has-error]="companyName.invalid && companyName.touched">
                                 <input class="form-control underlined" type="text" input-group-addon placeholder="Empresa *"  #companyName="ngModel"
-                                    name="companyName" [(ngModel)]="user_register.company_name">
-                                <span class="has-error" *ngIf="companyName.invalid">El campo es requerido</span>
+                                    name="companyName" [(ngModel)]="user_register.company_name" required>
+                                    <span *ngIf="companyName.hasError('required')  && companyName.touched" class="has-error">
+                                            Campo Requerido
+                                        </span>
                             </div>
 
 
 
-                            <div class="form-group has-error col-md-6 ">
+                            <div class="form-group has-error col-md-6 " [class.has-error]="companyPersonName.invalid && companyPersonName.touched">
                                 <input class="form-control underlined " type="text" input-group-addon placeholder="Nombre *"   #companyPersonName="ngModel"
-                                    name="companyPersonName" [(ngModel)]="user_register.name">
-                                <span class="has-error" *ngIf="companyPersonName.invalid">El campo es requerido</span>
+                                    name="companyPersonName" [(ngModel)]="user_register.name" required>
+                                    <span *ngIf="companyPersonName.hasError('required')  && companyName.touched" class="has-error">
+                                            Campo Requerido
+                                        </span>
                             </div>
 
 
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group has-error col-md-6 ">
+                            <div class="form-group has-error col-md-6 " [class.has-error]="companySurname.invalid && companySurname.touched">
                                 <input class="form-control underlined" type="text" input-group-addon placeholder="Apellido *"   #companySurname="ngModel"
                                     name="companySurname" [(ngModel)]="user_register.surname">
                             </div>
 
-                            <span class="has-error" *ngIf="companySurname.invalid">El campo es requerido</span>
-
-
+                            <span *ngIf="companySurname.hasError('required')  && companySurname.touched" class="has-error">
+                                    Campo Requerido
+                                </span>
                             <div class="form-group has-error col-md-6">
                                 <input class="form-control underlined" type="text" input-group-addon placeholder="Tipo de identificacion"  
                                     #companyNitType="ngModel" name="companyNitType" [(ngModel)]="user_register.nit_type">
