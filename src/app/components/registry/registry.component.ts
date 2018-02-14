@@ -41,8 +41,10 @@ export class RegistryComponent implements OnInit {
   }
 
   onSubmitRegister() {
-    this.user_register.role = this.tipo_usuario;
-    this._registryService.register(this.user_register).subscribe(
+  
+   this.user_register.role = this.tipo_usuario;
+  console.log( this.user_register ) ;
+ /*    this._registryService.register(this.user_register).subscribe(
       response => {
         if (response.user) {
 
@@ -73,6 +75,6 @@ export class RegistryComponent implements OnInit {
           console.log(error);
         }
       }
-    );
+    );*/
   }
 }

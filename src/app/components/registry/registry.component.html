@@ -37,7 +37,7 @@
                     <form #companyRegisterForm="ngForm" (ngSubmit)="onSubmitRegister()">
                         <div class="form-row">
                             <div class="form-group  col-md-6 ">
-                                <input class="form-control underlined" type="text" input-group-addon placeholder="Empresa *" id="inputError1" #companyName="ngModel"
+                                <input class="form-control underlined" type="text" input-group-addon placeholder="Empresa *"  #companyName="ngModel"
                                     name="companyName" [(ngModel)]="user_register.company_name">
                                 <span class="has-error" *ngIf="companyName.invalid">El campo es requerido</span>
                             </div>
@@ -45,7 +45,7 @@
 
 
                             <div class="form-group has-error col-md-6 ">
-                                <input class="form-control underlined " type="text" input-group-addon placeholder="Nombre *" id="inputError1" #companyPersonName="ngModel"
+                                <input class="form-control underlined " type="text" input-group-addon placeholder="Nombre *"   #companyPersonName="ngModel"
                                     name="companyPersonName" [(ngModel)]="user_register.name">
                                 <span class="has-error" *ngIf="companyPersonName.invalid">El campo es requerido</span>
                             </div>
@@ -55,7 +55,7 @@
 
                         <div class="form-row">
                             <div class="form-group has-error col-md-6 ">
-                                <input class="form-control underlined" type="text" input-group-addon placeholder="Apellido *" id="inputError1" #companySurname="ngModel"
+                                <input class="form-control underlined" type="text" input-group-addon placeholder="Apellido *"   #companySurname="ngModel"
                                     name="companySurname" [(ngModel)]="user_register.surname">
                             </div>
 
@@ -63,7 +63,7 @@
 
 
                             <div class="form-group has-error col-md-6">
-                                <input class="form-control underlined" type="text" input-group-addon placeholder="Tipo de identificacion" id="inputError1"
+                                <input class="form-control underlined" type="text" input-group-addon placeholder="Tipo de identificacion"  
                                     #companyNitType="ngModel" name="companyNitType" [(ngModel)]="user_register.nit_type">
                             </div>
 
@@ -73,31 +73,31 @@
                         <div class="form-row">
                             <div class="form-group has-error col-md-6">
 
-                                <input class="form-control underlined" type="text" input-group-addon placeholder="cedula" id="inputError1" #companyNit="ngModel"
+                                <input class="form-control underlined" type="text" input-group-addon placeholder="cedula"   #companyNit="ngModel"
                                     name="companyNit" [(ngModel)]="user_register.nit">
                             </div>
 
                             <span class="has-error" *ngIf="companyNit.invalid">El campo es requerido</span>
 
                             <div class="form-group has-error col-md-6">
-                                <input class="form-control underlined" type="text" input-group-addon placeholder="Telefono" id="inputError1" #companyPhone="ngModel"
+                                <input class="form-control underlined" type="text"   placeholder="Telefono"   #companyPhone="ngModel"
                                     name="companyPhone" [(ngModel)]="user_register.phone">
 
                             </div>
-                            <span class="has-error" *ngIf="telefono.invalid">El campo es requerido</span>
+                            <span class="has-error" *ngIf="companyPhone.invalid">El campo es requerido</span>
 
                         </div>
 
                         <div class="form-row">
                             <div class="form-group has-error col-md-6">
-                                <input class="form-control underlined" type="celular" placeholder="Celular *" id="inputError1" #companyCellPhone="ngModel"
+                                <input class="form-control underlined" type="celular" placeholder="Celular *"  #companyCellPhone="ngModel"
                                     name="companyCellPhone" [(ngModel)]="user_register.cell_phone">
                             </div>
                             <div class="has-error" *ngIf="companyCellPhone.invalid">El campo es requerido</div>
 
                             <div class="form-group has-error col-md-6">
 
-                                <input class="form-control underlined" type="text" placeholder="Direccion de recogida habitual *" id="inputError1" #companyAddress="ngModel"
+                                <input class="form-control underlined" type="text" placeholder="Direccion de recogida habitual *"   #companyAddress="ngModel"
                                     name="companyAddress" [(ngModel)]="user_register.address">
                                 <div class="has-error" *ngIf="companyAddress.invalid">El campo es requerido</div>
 
