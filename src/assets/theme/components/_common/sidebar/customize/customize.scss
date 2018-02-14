@@ -20,7 +20,7 @@
 		
 	}
 
-	.sidebar-open & {
+	.sidebar_open & {
 		@include media-down(md) {
 			left: 0;
 		}

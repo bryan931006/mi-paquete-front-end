@@ -1,22 +1,20 @@
-
+import { GLOBAL } from './../../services/global';
+import { LoginService } from './../../services/login/login.service';
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from './services/login/login.service';
-import { Http, Response, Headers } from '@angular/http';
+ import { Http, Response, Headers } from '@angular/http';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { GLOBAL } from './services/global';
-import { FormControl, Validators } from '@angular/forms';
-
+ import { FormControl, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.scss'],
   providers: [LoginService]
 })
-export class AppComponent {
+export class MenuComponent implements OnInit {
 
-  toggleMenu: boolean = false;
-  classes_menu = {
+  public toggleMenu: boolean = false;
+  public classes_menu = {
     app: true,
     sidebar_open: false
   };
@@ -36,6 +34,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
+ 
 
     this.identity = this._loginService.getIdentity();
     if (this.identity == null) {
@@ -44,7 +43,6 @@ export class AppComponent {
 
 
   }
-
 
   logout() {
     this._loginService.logout();
@@ -58,7 +56,5 @@ export class AppComponent {
       this.classes_menu.sidebar_open = true;
     }
   }
- 
-
 
 }

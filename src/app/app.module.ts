@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import {HomeComponent} from '../app/components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { MenuComponent } from './components/menu/menu.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { LoginComponent } from './components/login/login.component';
     LoginComponent,
     RegistryComponent,
     CalculatorComponent,
+    MenuComponent,
    
   ],
   imports: [

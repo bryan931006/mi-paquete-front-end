@@ -1,12 +1,14 @@
-<!--div class="main-wrapper">
-  <div [ngClass] = "classes_menu"   id="app">
-  
-    
+<div class="main-wrapper">
+  <div [ngClass]="classes_menu" id="app" ng-reflect-ng-class="[object Object]" class="app">
+    <!-- HEADER-->
+    <!-- ASIDE-->
+
+
     <header class="header">
       <div class="header-block header-block-collapse d-lg-none d-xl-none">
-        <button class="collapse-btn" id="sidebar-collapse-btn" (click) = "showMenu()">
-          <i class="fa fa-bars"></i> 
-      </button>
+        <button class="collapse-btn" id="sidebar-collapse-btn" (click)="showMenu()">
+            <i class="fa fa-bars"></i> 
+        </button>
       </div>
       <div class="header-block header-block-search">
         <form role="search">
@@ -19,17 +21,17 @@
       </div>
       <div class="header-block header-block-buttons">
         <a href="https://github.com/modularcode/modular-admin-html" class="btn btn-sm header-btn">
-          <i class="fa fa-github-alt"></i>
-          <span>View on GitHub</span>
-      </a>
+            <i class="fa fa-github-alt"></i>
+            <span>View on GitHub</span>
+        </a>
         <a href="https://github.com/modularcode/modular-admin-html/stargazers" class="btn btn-sm header-btn">
-          <i class="fa fa-star"></i>
-          <span>Star Us</span>
-      </a>
+            <i class="fa fa-star"></i>
+            <span>Star Us</span>
+        </a>
         <a href="https://github.com/modularcode/modular-admin-html/releases" class="btn btn-sm header-btn">
-          <i class="fa fa-cloud-download"></i>
-          <span>Download .zip</span>
-      </a>
+            <i class="fa fa-cloud-download"></i>
+            <span>Download .zip</span>
+        </a>
       </div>
 
 
@@ -38,11 +40,11 @@
         <ul class="nav-profile">
           <li class="notifications new">
             <a href="" data-toggle="dropdown">
-                  <i class="fa fa-bell-o"></i>
-                  <sup>
-                      <span class="counter">8</span>
-                  </sup>
-              </a>
+                    <i class="fa fa-bell-o"></i>
+                    <sup>
+                        <span class="counter">8</span>
+                    </sup>
+                </a>
             <div class="dropdown-menu notifications-dropdown-menu">
               <ul class="notifications-container">
                 <li>
@@ -99,14 +101,14 @@
             </a>
             <div class="dropdown-menu profile-dropdown-menu" aria-labelledby="dropdownMenu1">
               <a class="dropdown-item" href="#">
-                      <i class="fa fa-user icon"></i> Profile </a>
+                        <i class="fa fa-user icon"></i> Profile </a>
               <a class="dropdown-item" href="#">
-                      <i class="fa fa-bell icon"></i> Notifications </a>
+                        <i class="fa fa-bell icon"></i> Notifications </a>
               <a class="dropdown-item" href="#">
-                      <i class="fa fa-gear icon"></i> Settings </a>
+                        <i class="fa fa-gear icon"></i> Settings </a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="login.html">
-                      <i class="fa fa-power-off icon"></i> Logout </a>
+                        <i class="fa fa-power-off icon"></i> Logout </a>
             </div>
           </li>
         </ul>
@@ -140,71 +142,71 @@
 
             <li>
               <a href="index.html">
-						<i class="fa fa-home"></i> Dashboard
-					</a>
+              <i class="fa fa-home"></i> Dashboard
+            </a>
             </li>
 
 
             <li>
 
               <a data-toggle="dropdown" href="">
-						<i class="fa fa-th-large"></i> Items Manager
-						<i class="fa arrow"></i>
-					</a>
+              <i class="fa fa-th-large"></i> Items Manager
+              <i class="fa arrow"></i>
+            </a>
 
               <ul class="sidebar-nav">
                 <li>
                   <a href="items-list.html">
-								Items List
-							</a>
+                  Items List
+                </a>
                 </li>
 
                 <li>
                   <a href="item-editor.html">
-								Item Editor
-							</a>
+                  Item Editor
+                </a>
                 </li>
               </ul>
             </li>
 
             <li>
               <a href="">
-						<i class="fa fa-bar-chart"></i> Charts
-						<i class="fa arrow"></i>
-					</a>
+              <i class="fa fa-bar-chart"></i> Charts
+              <i class="fa arrow"></i>
+            </a>
 
               <ul class="sidebar-nav">
                 <li>
                   <a href="charts-flot.html">
-								Flot Charts
-							</a>
+                  Flot Charts
+                </a>
                 </li>
 
                 <li>
                   <a href="charts-morris.html">
-								Morris Charts
-							</a>
+                  Morris Charts
+                </a>
                 </li>
               </ul>
             </li>
 
             <li>
               <a href="">
-						<i class="fa fa-table"></i> Tables
-						<i class="fa arrow"></i>
-					</a>
+              <i class="fa fa-table"></i> Tables
+              <i class="fa arrow"></i>
+            </a>
 
               <ul class="sidebar-nav">
                 <li>
                   <a href="static-tables.html">
-								Static Tables
-							</a>
+                  Static Tables
+                </a>
                 </li>
 
                 <li>
                   <a href="responsive-tables.html">
-								Responsive Tables
-							</a>
+                  Responsive Tables
+                </a>
                 </li>
 
               </ul>
@@ -212,45 +214,45 @@
 
             <li>
               <a href="forms.html">
-						<i class="fa fa-pencil-square-o"></i> Forms
-					</a>
+              <i class="fa fa-pencil-square-o"></i> Forms
+            </a>
             </li>
 
             <li>
               <a href="">
-						<i class="fa fa-desktop"></i> UI Elements
-						<i class="fa arrow"></i>
-					</a>
+              <i class="fa fa-desktop"></i> UI Elements
+              <i class="fa arrow"></i>
+            </a>
 
               <ul class="sidebar-nav">
                 <li>
                   <a href="buttons.html">
-								Buttons
-							</a>
+                  Buttons
+                </a>
                 </li>
 
                 <li>
                   <a href="cards.html">
-								Cards
-							</a>
+                  Cards
+                </a>
                 </li>
 
                 <li>
                   <a href="typography.html">
-								Typography
-							</a>
+                  Typography
+                </a>
                 </li>
 
                 <li>
                   <a href="icons.html">
-								Icons
-							</a>
+                  Icons
+                </a>
                 </li>
 
                 <li>
                   <a href="grid.html">
-								Grid
-							</a>
+                  Grid
+                </a>
                 </li>
               </ul>
             </li>
@@ -258,81 +260,81 @@
             <li>
 
               <a href="">
-						<i class="fa fa-file-text-o"></i> Pages
-						<i class="fa arrow"></i>
-					</a>
+              <i class="fa fa-file-text-o"></i> Pages
+              <i class="fa arrow"></i>
+            </a>
 
               <ul class="sidebar-nav">
                 <li>
                   <a href="login.html">
-								Login
-							</a>
+                  Login
+                </a>
                 </li>
 
                 <li>
                   <a href="signup.html">
-								Sign Up
-							</a>
+                  Sign Up
+                </a>
                 </li>
 
                 <li>
                   <a href="reset.html">
-								Reset
-							</a>
+                  Reset
+                </a>
                 </li>
 
                 <li>
                   <a href="error-404.html">
-								Error 404 App
-							</a>
+                  Error 404 App
+                </a>
                 </li>
 
                 <li>
                   <a href="error-404-alt.html">
-								Error 404 Global
-							</a>
+                  Error 404 Global
+                </a>
                 </li>
 
                 <li>
                   <a href="error-500.html">
-								Error 500 App
-							</a>
+                  Error 500 App
+                </a>
                 </li>
 
                 <li>
                   <a href="error-500-alt.html">
-								Error 500 Global
-							</a>
+                  Error 500 Global
+                </a>
                 </li>
               </ul>
             </li>
 
             <li>
               <a href="">
-						<i class="fa fa-sitemap"></i> Menu Levels
-						<i class="fa arrow"></i>
-					</a>
+              <i class="fa fa-sitemap"></i> Menu Levels
+              <i class="fa arrow"></i>
+            </a>
 
               <ul class="sidebar-nav">
 
                 <li>
                   <a href="#">
-								Second Level Item
-								<i class="fa arrow"></i>
-							</a>
+                  Second Level Item
+                  <i class="fa arrow"></i>
+                </a>
 
                   <ul class="sidebar-nav">
 
                     <li>
                       <a href="#">
-										Third Level Item
-									</a>
+                      Third Level Item
+                    </a>
                     </li>
 
                     <li>
                       <a href="#">
-										Third Level Item
-									</a>
+                      Third Level Item
+                    </a>
                     </li>
 
                   </ul>
@@ -340,48 +342,48 @@
 
                 <li>
                   <a href="#">
-								Second Level Item
-							</a>
+                  Second Level Item
+                </a>
                 </li>
 
                 <li>
                   <a href="#">
-								Second Level Item
-								<i class="fa arrow"></i>
-							</a>
+                  Second Level Item
+                  <i class="fa arrow"></i>
+                </a>
 
                   <ul class="sidebar-nav">
 
                     <li>
                       <a href="#">
-										Third Level Item
-									</a>
+                      Third Level Item
+                    </a>
                     </li>
 
                     <li>
                       <a href="#">
-										Third Level Item
-									</a>
+                      Third Level Item
+                    </a>
                     </li>
 
                     <li>
                       <a href="#">
-										Third Level Item
-										<i class="fa arrow"></i>
-									</a>
+                      Third Level Item
+                      <i class="fa arrow"></i>
+                    </a>
 
                       <ul class="sidebar-nav">
 
                         <li>
                           <a href="#">
-												Fourth Level Item
-											</a>
+                          Fourth Level Item
+                        </a>
                         </li>
 
                         <li>
                           <a href="#">
-												Fourth Level Item
-											</a>
+                          Fourth Level Item
+                        </a>
                         </li>
                       </ul>
 
@@ -394,8 +396,8 @@
 
             <li>
               <a href="https://github.com/modularcode/modular-admin-html">
-						<i class="fa fa-github-alt"></i> Theme Docs
-					</a>
+              <i class="fa fa-github-alt"></i> Theme Docs
+            </a>
             </li>
 
 
@@ -426,15 +428,15 @@
                     </div>
                     <div class="col-4">
                       <label>
-                                <input class="radio" type="radio" name="sidebarPosition" value="sidebar-fixed" >
-                                <span></span>
-                            </label>
+                                  <input class="radio" type="radio" name="sidebarPosition" value="sidebar-fixed" >
+                                  <span></span>
+                              </label>
                     </div>
                     <div class="col-4">
                       <label>
-                                <input class="radio" type="radio" name="sidebarPosition" value="">
-                                <span></span>
-                            </label>
+                                  <input class="radio" type="radio" name="sidebarPosition" value="">
+                                  <span></span>
+                              </label>
                     </div>
                   </div>
                   <div class="row">
@@ -443,15 +445,15 @@
                     </div>
                     <div class="col-4">
                       <label>
-                                <input class="radio" type="radio" name="headerPosition" value="header-fixed">
-                                <span></span>
-                            </label>
+                                  <input class="radio" type="radio" name="headerPosition" value="header-fixed">
+                                  <span></span>
+                              </label>
                     </div>
                     <div class="col-4">
                       <label>
-                                <input class="radio" type="radio" name="headerPosition" value="">
-                                <span></span>
-                            </label>
+                                  <input class="radio" type="radio" name="headerPosition" value="">
+                                  <span></span>
+                              </label>
                     </div>
                   </div>
                   <div class="row">
@@ -460,15 +462,15 @@
                     </div>
                     <div class="col-4">
                       <label>
-                                <input class="radio" type="radio" name="footerPosition" value="footer-fixed">
-                                <span></span>
-                            </label>
+                                  <input class="radio" type="radio" name="footerPosition" value="footer-fixed">
+                                  <span></span>
+                              </label>
                     </div>
                     <div class="col-4">
                       <label>
-                                <input class="radio" type="radio" name="footerPosition" value="">
-                                <span></span>
-                            </label>
+                                  <input class="radio" type="radio" name="footerPosition" value="">
+                                  <span></span>
+                              </label>
                     </div>
                   </div>
                 </div>
@@ -497,19 +499,25 @@
               </li>
             </ul>
             <a href="">
-          <i class="fa fa-cog"></i> Customize
-        </a>
+            <i class="fa fa-cog"></i> Customize
+          </a>
           </li>
         </ul>
       </footer>
     </aside>
 
     <div class="sidebar-overlay" id="sidebar-overlay" (click)="showMenu()"></div>
-    <div class="sidebar-mobile-menu-handle" id="sidebar-mobile-menu-handle"></div>
-    <div class="mobile-menu-handle"></div>
-    <router-outlet></router-outlet>
+    <div class="sidebar-mobile-menu-handle" id="sidebar-mobile-menu-handle">   </div>
+    <div class="mobile-menu-handle">      </div>
+     
+    <article class="content forms-page">
+ 
+
+      <router-outlet  ></router-outlet>
+
+    </article>
+ 
   </div>
-</div-->
-
-
-<router-outlet></router-outlet>
+ 
+</div>
+ 
