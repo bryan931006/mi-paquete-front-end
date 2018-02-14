@@ -1,88 +1,100 @@
 
+<div  *ngIf="identity" id="home-user-logged">
+  <p>
+    Bienvenido {{ identity.name }}</p>
 
-<!--div class="container">
+    </div>
 
-  <fieldset>
-    
-  <div class="calculadora">
-  
-      <mat-form-field class="prueba">
-  
-              
-          <input matInput placeholder="Origen">
-        </mat-form-field>
-  
-        <mat-form-field class="destino">
-  
-              
-            <input matInput placeholder="Destino">
-          </mat-form-field>
-    
-  
-          <mat-checkbox class="paquete">Paquete</mat-checkbox>
-          <mat-checkbox>Sobre</mat-checkbox>
-  
-  
-          <mat-form-field class="cantidad">
-  
-              
-              <input matInput placeholder="Cantidad">
-            </mat-form-field>
+<section class="calculadora">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <input class="form-control" type="text" input-group-addon placeholder="Origen">
+            </div>
+
+            <div class="form-group col-md-3">
+              <input class="form-control" type="text" input-group-addon placeholder="Destino">
+            </div>
+
+            <div class="form-group col-md-3">
+              <label class="custom-control custom-radio">
+                <input id="radio1" name="radio" type="radio" class="custom-control-input">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">paquete</span>
+
+              </label>
+              <label class="custom-control custom-radio">
+                <input id="radio1" name="radio" type="radio" class="custom-control-input">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">sobre</span>
+
+              </label>
+            </div>
+
+            <div class="form-group col-md-3">
+              <input class="form-control" input-group-addon placeholder="Cantidad">
+            </div>
+
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-2">
+
+              <input class="form-control" input-group-addon placeholder="Ancho">
+            </div>
+
+            <div class="form-group col-md-2">
+
+              <input class="form-control" input-group-addon placeholder="alto">
+
+            </div>
+
+            <div class="form-group col-md-2">
+              <input class="form-control" input-group-addon placeholder="largo">
+            </div>
+
+            <div class="form-group col-md-2">
+              <label>cm</label>
+            </div>
+
+            <div class="form-group col-md-2">
+              <img class="logito" src="../assets/cajita.png" width="30px">
+
+            </div>
+
+            <div class="form-group col-md-2">
+              <input class="form-control" input-group-addon placeholder="peso">
+
+            </div>
+          </div>
+
+          <div class="form-row">
+
+            <div class="form-group col-md-3">
+              <label>Valor declarado</label>
+            </div>
+            <div class="form-group col-md-3">
+              <input class="form-control" input-group-addon>
+            </div>
+
+            <div class="form-group col-md-2">
+              <label>Tipo de carga</label>
+            </div>
+            <div class="form-group col-md-4">
+              <input class="form-control" input-group-addon>
+            </div>
+
+            <div class="form-group col-md-3 col-md-offset-3">
+                <button type="button" class="btn btn-primary" width="400px">Comparar</button>
+            </div>
+
+          </div>
+
+        </form>
       </div>
-  
-      <div>
-  
-          <mat-form-field class="prueba3">
-  
-              
-              <input matInput placeholder="Ancho">
-            </mat-form-field>
-  
-            <mat-form-field class="prueba3">
-  
-              
-                <input matInput placeholder="Alto">
-              </mat-form-field>
-  
-              <mat-form-field class="prueba3">
-  
-              
-                  <input matInput placeholder="Largo">
-                </mat-form-field>
-  
-       <label >cm</label>     
-  
-       <img class="logito" src="../assets/cajita.png" width="50px">
-  
-       <mat-form-field class="peso">
-  
-              
-          <input matInput placeholder="peso">
-        </mat-form-field>
-      </div>
-  
-      <div>
-          <mat-form-field class="valor">
-  
-              
-              <input matInput placeholder="valor declarado">
-            </mat-form-field>
-  
-            <mat-form-field class="carga">
-  
-              
-                <input matInput placeholder="Tipo de carga">
-              </mat-form-field>
-  
-  
-      </div>
-  
-      <div>
-  
-        <button class="boton" mat-button> Comparar</button>
-      </div>
-  
-  </fieldset>
-  
-  
-  </div-->
+    </div>
+  </div>
+</section>

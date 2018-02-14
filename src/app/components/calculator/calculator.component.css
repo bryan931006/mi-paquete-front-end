@@ -1,15 +1,18 @@
 .container{
 
-    width: 70%;
+    width: 60%;
     height: 100%;
     background-color:#D8D8D8;
-    margin-left:300px;
-    max-width: 1000px;
+   
+    max-width: 100%;
     margin:auto;
     margin-top:150px;
 
 }
+.calculadora{
 
+padding-left: 50px;
+}
 .boton{
 
     margin-left:350px;

@@ -70,7 +70,7 @@ export class LoginComponent implements OnInit {
 
                 this.user = new User();
                 this.user.role = 'ROLE_USER';
-                this._router.navigate(['/home']);
+                this._router.navigate(['/calculadora']);
                 //que aprezca el boton cerrar secion
                 document.getElementById('but-log-out').style.visibility = "visible";
               

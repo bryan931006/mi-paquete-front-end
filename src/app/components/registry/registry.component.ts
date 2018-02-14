@@ -9,7 +9,7 @@ import { User } from "../../models/user";
 @Component({
   selector: 'app-registry',
   templateUrl: './registry.component.html',
-  styleUrls: ['./registry.component.css'],
+  styleUrls: ['./registry.component.scss'],
   providers: [RegistryService]
 })
 export class RegistryComponent implements OnInit {
